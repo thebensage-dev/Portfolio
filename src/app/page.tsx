@@ -1,31 +1,21 @@
-import { ArrowDown, ArrowUpRight, LogIn, LogOut, Mail, UserCog } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Mail } from "lucide-react";
 import { cookies } from "next/headers";
-import Link from "next/link";
 import { connection } from "next/server";
 import {
   BrandBlobs,
   COLOURS_COOKIE,
-  Logo,
   preferenceCookieDomain,
   readColours,
   readTheme,
   toneAt,
   THEME_COOKIE,
-  ThemeToggle,
 } from "@thebensage-dev/ui";
 import ProjectCard from "@/components/ProjectCard";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import StackSection from "@/components/StackSection";
 import ThemeSection from "@/components/ThemeSection";
-import {
-  apiReference,
-  projectHref,
-  projectUrl,
-  projects,
-  site,
-  siteUrl,
-  themeDemo,
-} from "@/content/site";
+import { projectHref, projectUrl, projects, site, siteUrl } from "@/content/site";
 import { accountUrl, authConfigured, currentUser, requestAccessUrl } from "@/server/auth";
 
 const signInHref = (returnTo: string) => `/auth/login?returnTo=${encodeURIComponent(returnTo)}`;
@@ -48,73 +38,13 @@ export default async function Home() {
 
   return (
     <>
-      <header className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
-        <a href="#top" className="rounded-md">
-          {/* The name hides on the narrowest phones (under 360 px), so the header never scrolls sideways. */}
-          <Logo name={<span className="sr-only min-[360px]:not-sr-only">{site.name}</span>} />
-        </a>
-        {/* On phones only the theme toggle and sign-in fit beside the logo; the hero's buttons
-            cover Projects, GitHub and Contact there. */}
-        <nav className="flex items-center gap-2 text-sm font-medium text-foreground-muted sm:gap-5">
-          <a href="#projects" className="hidden hover:text-foreground sm:inline">
-            Projects
-          </a>
-          <a href="#stack" className="hidden hover:text-foreground sm:inline">
-            How it&apos;s built
-          </a>
-          <Link href="/api-reference" className="hidden hover:text-foreground sm:inline">
-            {apiReference.navLabel}
-          </Link>
-          <a
-            href={site.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden hover:text-foreground sm:inline"
-          >
-            GitHub
-          </a>
-          <a href={mailto} className="hidden hover:text-foreground sm:inline">
-            Contact
-          </a>
-          <a href="#theme" className="hidden hover:text-foreground md:inline">
-            Theme
-          </a>
-          <ThemeToggle initialTheme={theme} cookieDomain={cookieDomain} />
-          {user ? (
-            <form action="/auth/logout" method="post" className="flex items-center gap-1 sm:gap-2">
-              {account ? (
-                <a
-                  href={account}
-                  className="flex items-center gap-1.5 hover:text-foreground"
-                  title={themeDemo.account}
-                >
-                  <UserCog className="size-4" aria-hidden />
-                  <span className="hidden max-w-32 truncate lg:inline">{user.name}</span>
-                  <span className="sr-only lg:hidden">{themeDemo.account}</span>
-                </a>
-              ) : (
-                <span className="hidden max-w-32 truncate lg:inline">{user.name}</span>
-              )}
-              <button
-                type="submit"
-                className="icon-btn"
-                title={themeDemo.signOut}
-                aria-label={themeDemo.signOut}
-              >
-                <LogOut className="size-4" />
-              </button>
-            </form>
-          ) : (
-            canSignIn && (
-              <a href={signInHref("/")} className="flex items-center gap-1.5 hover:text-foreground">
-                <LogIn className="size-4" aria-hidden />
-                <span className="hidden sm:inline">{themeDemo.signIn}</span>
-                <span className="sr-only sm:hidden">{themeDemo.signIn}</span>
-              </a>
-            )
-          )}
-        </nav>
-      </header>
+      <SiteHeader
+        theme={theme}
+        cookieDomain={cookieDomain}
+        user={user}
+        accountHref={account}
+        signInHref={canSignIn ? signInHref("/") : undefined}
+      />
 
       <main id="top" className="flex-1">
         <section className="relative isolate overflow-hidden">
