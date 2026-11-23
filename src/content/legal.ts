@@ -56,7 +56,8 @@ export const privacy: LegalDoc = {
       body: [
         [
           "**IONOS:** hosts the server.",
-          "**Cloudflare:** provides DNS for the domain.",
+          "**Cloudflare:** provides DNS for the domain and forwards email sent to its addresses.",
+          "**SMTP2GO:** sends the sites' emails, such as sign-in access requests and approvals.",
           "**Google (Gmail):** stores email correspondence.",
         ],
         "Where a provider processes data outside the UK, the transfer is protected by safeguards recognised under UK data protection law.",

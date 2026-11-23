@@ -26,7 +26,7 @@ All the wording, links and the project list live in [`src/content/site.ts`](src/
 
 The "How this site is built" section (`stack` in the same file) sums up the hosting, CI/CD, shared UI, sign-in and monitoring setup.
 
-The privacy notice (`/privacy`) and terms (`/terms`) live in [`src/content/legal.ts`](src/content/legal.ts) and are linked from the footer here, from the User Directory's footer and from authentik's guest sign-up form. They describe what is actually deployed (logs kept 14 days, metrics 30 days, sign-in records up to 12 months, only essential cookies, IONOS, Cloudflare DNS and Gmail), so update them, and the date, whenever that changes.
+The privacy notice (`/privacy`) and terms (`/terms`) live in [`src/content/legal.ts`](src/content/legal.ts) and are linked from the footer here, from the User Directory's footer and from authentik's guest sign-up form. They describe what is actually deployed (logs kept 14 days, metrics 30 days, sign-in records up to 12 months, only essential cookies, IONOS for hosting, Cloudflare for DNS and email forwarding, SMTP2GO for sending email and Gmail for correspondence), so update them, and the date, whenever that changes.
 
 > **TODO (after go-live):** write a fuller account of the setup (VPS and Coolify, Cloudflare, the deploy pipeline, authentik, monitoring) and link it from that section. Until then, keep its wording to what is actually set up, and don't quote uptime or performance figures.
 

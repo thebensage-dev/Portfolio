@@ -60,8 +60,8 @@ export const site = {
     "Full-stack web development with Next.js, React and TypeScript, self-hosted on a VPS I manage.",
   /** The GitHub organization that holds every repo; its page lists the public ones. */
   githubUrl: GITHUB_ORG,
-  /** Contact for now; a contact form (with SMTP) comes later. */
-  email: "creativebensonglasgow@gmail.com",
+  /** Public contact address (mailto links, privacy notice and terms). */
+  email: "hello@thebensage.com",
 };
 
 /** This site's public URL (SITE_URL, no trailing slash), read at request time. Used for link
