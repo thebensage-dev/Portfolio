@@ -50,10 +50,13 @@ export default async function Home() {
     <>
       <header className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="rounded-md">
-          <Logo name={site.name} />
+          {/* The name hides on the narrowest phones (under 360 px), so the header never scrolls sideways. */}
+          <Logo name={<span className="sr-only min-[360px]:not-sr-only">{site.name}</span>} />
         </a>
-        <nav className="flex items-center gap-5 text-sm font-medium text-foreground-muted">
-          <a href="#projects" className="hover:text-foreground">
+        {/* On phones only the theme toggle and sign-in fit beside the logo; the hero's buttons
+            cover Projects, GitHub and Contact there. */}
+        <nav className="flex items-center gap-2 text-sm font-medium text-foreground-muted sm:gap-5">
+          <a href="#projects" className="hidden hover:text-foreground sm:inline">
             Projects
           </a>
           <a href="#stack" className="hidden hover:text-foreground sm:inline">
@@ -66,11 +69,11 @@ export default async function Home() {
             href={site.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-foreground"
+            className="hidden hover:text-foreground sm:inline"
           >
             GitHub
           </a>
-          <a href={mailto} className="hover:text-foreground">
+          <a href={mailto} className="hidden hover:text-foreground sm:inline">
             Contact
           </a>
           <a href="#theme" className="hidden hover:text-foreground md:inline">
@@ -78,7 +81,7 @@ export default async function Home() {
           </a>
           <ThemeToggle initialTheme={theme} cookieDomain={cookieDomain} />
           {user ? (
-            <form action="/auth/logout" method="post" className="flex items-center gap-2">
+            <form action="/auth/logout" method="post" className="flex items-center gap-1 sm:gap-2">
               {account ? (
                 <a
                   href={account}
