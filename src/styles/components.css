@@ -1,0 +1,16 @@
+/* Portfolio only. Tokens, base styles and the shared component classes (btn, card, tag,
+   eyebrow, reveal, blob…) come from @thebensage-dev/ui. Native CSS nesting, no Sass. */
+
+@layer components {
+  /* The shared tone-card gives the coloured edge and hover border; this adds the lift. */
+  .project-card {
+    transition:
+      border-color 150ms,
+      box-shadow 150ms,
+      transform 150ms;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}

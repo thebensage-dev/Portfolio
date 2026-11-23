@@ -1,0 +1,59 @@
+/* Maps Scalar's theme variables onto the shared palette, so the reference follows the site's
+   light/dark class and the colours the visitor picks. Unlayered on purpose: it must
+   beat Scalar's own theme, whichever loads last. */
+
+.api-reference,
+.api-reference .light-mode,
+.api-reference .dark-mode {
+  --scalar-font: var(--font-sans);
+  --scalar-font-code: var(--font-mono);
+  --scalar-radius: 0.5rem;
+  --scalar-radius-lg: 0.75rem;
+  --scalar-radius-xl: 1rem;
+  --scalar-border-width: 1px;
+
+  --scalar-background-1: var(--color-surface);
+  --scalar-background-2: var(--color-background);
+  --scalar-background-3: var(--color-surface-muted);
+  --scalar-background-accent: var(--color-primary-soft);
+  --scalar-border-color: var(--color-border);
+
+  --scalar-color-1: var(--color-foreground);
+  --scalar-color-2: var(--color-foreground-muted);
+  --scalar-color-3: var(--color-foreground-muted);
+  --scalar-color-accent: var(--color-primary-ink);
+  --scalar-link-color: var(--color-primary-ink);
+  --scalar-link-color-hover: var(--color-primary-hover);
+
+  --scalar-button-1: var(--color-primary);
+  --scalar-button-1-hover: var(--color-primary-hover);
+  --scalar-button-1-color: var(--color-on-primary);
+
+  --scalar-color-green: var(--color-success-ink);
+  --scalar-color-red: var(--color-danger-ink);
+  --scalar-color-yellow: var(--color-warning-ink);
+  --scalar-color-orange: var(--color-warning-ink);
+  --scalar-color-blue: var(--color-primary-ink);
+  --scalar-color-purple: var(--color-primary-ink);
+  --scalar-color-danger: var(--color-danger-ink);
+  --scalar-background-danger: var(--color-danger-soft);
+
+  --scalar-sidebar-background-1: var(--color-surface);
+  --scalar-sidebar-color-1: var(--color-foreground);
+  --scalar-sidebar-color-2: var(--color-foreground-muted);
+  --scalar-sidebar-border-color: var(--color-border);
+  --scalar-sidebar-item-hover-background: var(--color-surface-muted);
+  --scalar-sidebar-item-hover-color: var(--color-foreground);
+  --scalar-sidebar-item-active-background: var(--color-primary-soft);
+  --scalar-sidebar-color-active: var(--color-primary-ink);
+  --scalar-sidebar-search-background: var(--color-background);
+  --scalar-sidebar-search-border-color: var(--color-border-strong);
+  --scalar-sidebar-search-color: var(--color-foreground-muted);
+
+  --scalar-scrollbar-color: var(--color-border-strong);
+  --scalar-scrollbar-color-active: var(--color-foreground-muted);
+}
+
+.api-reference .scalar-app {
+  background: var(--color-surface);
+}

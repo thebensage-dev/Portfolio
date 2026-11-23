@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Shared tokens, base styles (incl. focus ring and reduced motion) and component classes. */
+@import "@thebensage-dev/ui/styles.css";
+
+/* Site-only styles. */
+@import "../styles/components.css";
+
+html {
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}

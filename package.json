@@ -1,0 +1,47 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "docker:build": "node scripts/docker-build.mjs",
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "lint": "eslint --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run lint && npm run typecheck"
+  },
+  "dependencies": {
+    "@scalar/api-reference-react": "0.9.95",
+    "@thebensage-dev/ui": "^1.0.0",
+    "clsx": "^2.1.1",
+    "jose": "^6.2.18",
+    "lucide-react": "^1.77.0",
+    "next": "16.4.6",
+    "openid-client": "^6.9.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "simple-icons": "^16.38.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.6",
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": ">=26"
+  },
+  "allowScripts": {
+    "vue-demi": false
+  }
+}
