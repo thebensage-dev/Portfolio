@@ -1,31 +1,26 @@
 import clsx from "clsx";
-import { ArrowLeft, ArrowUpRight, Code, FileBraces } from "lucide-react";
+import { ArrowUpRight, Code, FileBraces } from "lucide-react";
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
-import Link from "next/link";
 import { connection } from "next/server";
-import {
-  preferenceCookieDomain,
-  readTheme,
-  THEME_COOKIE,
-  ThemeToggle,
-  toneAt,
-  toneClass,
-} from "@thebensage-dev/ui";
+import { toneAt, toneClass } from "@thebensage-dev/ui";
 import ApiReference from "@/components/ApiReference";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import { fetchApiSpec } from "@/lib/apiSpec";
-import { apiReference, projectUrl, projects, site, siteUrl } from "@/content/site";
+import { pageMetadata } from "@/lib/pageMetadata";
+import { apiReference, projectUrl, projects } from "@/content/site";
+import { headerProps } from "@/server/headerProps";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: apiReference.title,
   description: apiReference.description,
-};
+  path: "/api-reference",
+});
 
 export default async function ApiReferencePage() {
   // Per request, so the project URL and the OpenAPI document come from the runtime env.
   await connection();
-  const theme = readTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const header = await headerProps("/api-reference");
   const spec = await fetchApiSpec();
   const project = projects.find((p) => p.url.env === apiReference.project);
   const { links } = apiReference;
@@ -44,16 +39,7 @@ export default async function ApiReferencePage() {
 
   return (
     <>
-      <header className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-foreground-muted hover:text-foreground"
-        >
-          <ArrowLeft className="size-4" aria-hidden />
-          {site.name}
-        </Link>
-        <ThemeToggle initialTheme={theme} cookieDomain={preferenceCookieDomain(siteUrl())} />
-      </header>
+      <SiteHeader {...header} />
 
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-8 pb-20 sm:px-6">
         <div className="max-w-3xl">

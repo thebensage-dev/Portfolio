@@ -6,10 +6,12 @@ import {
   Braces,
   Container,
   Eye,
+  Gauge,
   GitBranch,
   Globe,
   KeyRound,
   Laptop,
+  Mail,
   Palette,
   Rocket,
   ScrollText,
@@ -22,6 +24,7 @@ import {
 import {
   type SimpleIcon,
   siCaddy,
+  siClaude,
   siCloudflare,
   siCoolify,
   siDependabot,
@@ -50,14 +53,14 @@ const GITHUB_ORG = "https://github.com/thebensage-dev";
 
 export const site = {
   name: "TheBensage",
-  role: "Full-stack developer",
+  role: "Full-stack developer · Next.js · .NET",
   headline: "Web applications, from database to deployment.",
   /** The part of the headline drawn in the brand gradient. */
   headlineHighlight: "from database to deployment",
   intro:
-    "I build full-stack applications with Next.js, React and TypeScript, and run them on infrastructure I manage myself. Each project below is live.",
+    "I build full-stack applications: Next.js, React and TypeScript on the front end, .NET APIs on PostgreSQL behind them, and the infrastructure they run on, which I manage myself. Each project below is live.",
   footerTagline:
-    "Full-stack web development with Next.js, React and TypeScript, self-hosted on a VPS I manage.",
+    "Full-stack web development with Next.js, React, TypeScript and .NET, self-hosted on a VPS I manage.",
   /** The GitHub organization that holds every repo; its page lists the public ones. */
   githubUrl: GITHUB_ORG,
   /** Public contact address (mailto links, privacy notice and terms). */
@@ -124,6 +127,15 @@ export const projects: Project[] = [
   },
 ];
 
+/** Shown after the projects as "Coming next": what I'm adding to the platform. */
+export const comingNext = {
+  title: "Coming next",
+  items: [
+    { name: "RabbitMQ", detail: "Messaging between the API and the apps" },
+    { name: "Stripe", detail: "Payments" },
+  ],
+};
+
 /** Reads a project's URL from the environment at request time. */
 export function projectUrl(project: Project): string {
   return process.env[project.url.env] || project.url.fallback;
@@ -135,10 +147,9 @@ export function projectHref(project: Project): string {
 }
 
 export const stack = {
-  title: "How this site is built",
+  title: "Every piece, and the tools behind it",
   intro:
-    "Every project runs on infrastructure I set up and maintain: the server, the deployment pipeline, sign-in, monitoring, logging and security.",
-  note: "A detailed write-up of the setup is in progress.",
+    "Every project runs on infrastructure I set up and maintain: the server, the deployment pipeline, sign-in, monitoring, logging, email and security.",
   /** The path a change takes from my editor to your browser. */
   pipeline: [
     { icon: GitBranch, title: "Pull request", detail: "One open-source repo per project" },
@@ -179,7 +190,7 @@ export const stack = {
       icon: KeyRound,
       title: "Single sign-on",
       description:
-        "My own authentik instance handles sign-in over OpenID Connect for Grafana and the User Directory, with passkeys and two-factor, group-based access, a “Request access” sign-up per app that waits for my approval (with emails at each step) and single-use invite links for guests. Its groups, apps, sign-in pages and branding are set up from versioned blueprints.",
+        "My own authentik instance signs you in to every site over OpenID Connect: sign in once for all of them, sign out once from all of them. Passkeys and two-factor, group-based access, one “Request access” page that I approve app by app (with emails at each step) and single-use invite links for guests, all set up from a versioned blueprint.",
       tags: ["authentik", "OIDC"],
     },
     {
@@ -195,6 +206,20 @@ export const stack = {
       description:
         "Alloy gathers the output of every container and stores it in Loki, so errors from any app can be searched in the same Grafana, next to the metrics.",
       tags: ["Loki", "Alloy", "Grafana"],
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      description:
+        "Access requests, approvals and alerts go out through SMTP2GO from noreply@, on a verified domain with its DNS records in Cloudflare. The public addresses are forwarded by Cloudflare Email Routing, and every setting comes from the pipeline.",
+      tags: ["SMTP2GO", "Cloudflare Email Routing"],
+    },
+    {
+      icon: Gauge,
+      title: "Public status page",
+      description:
+        "A read-only Grafana dashboard anyone can open shows each site's status, uptime and response time, and the server's CPU, memory and disk, from the same checks that send the alerts. It's linked in the footer as Live status.",
+      tags: ["Grafana", "Blackbox exporter"],
     },
     {
       icon: Users,
@@ -255,13 +280,21 @@ export const stack = {
       ],
     },
     {
-      group: "Sign-in and monitoring",
+      group: "Sign-in, monitoring and email",
       items: [
         { name: "authentik", url: "https://goauthentik.io", logo: siAuthentik },
         { name: "Prometheus", url: "https://prometheus.io", logo: siPrometheus },
         { name: "Grafana", url: "https://grafana.com", logo: siGrafana },
         { name: "Loki", url: "https://grafana.com/oss/loki/", icon: ScrollText },
         { name: "Alloy", url: "https://grafana.com/oss/alloy/", icon: Workflow },
+        { name: "SMTP2GO", url: "https://www.smtp2go.com", icon: Mail },
+      ],
+    },
+    {
+      group: "Built with",
+      items: [
+        { name: "Claude Code", url: "https://claude.com/claude-code", logo: siClaude },
+        { name: "GitHub Desktop", url: "https://desktop.github.com", logo: siGithub },
       ],
     },
   ] satisfies ToolGroup[],

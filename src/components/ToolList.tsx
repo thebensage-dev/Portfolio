@@ -17,7 +17,7 @@ export default function ToolList() {
   return (
     <div className="mt-14">
       <h3 className="font-semibold tracking-tight">The tools behind it</h3>
-      <div className="mt-5 grid gap-6 md:grid-cols-3">
+      <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {stack.tools.map(({ group, items }, i) => (
           <div key={group} className={toneClass(toneAt(i))}>
             <p className="eyebrow flex items-center gap-2">

@@ -1,11 +1,8 @@
-import { ArrowLeft } from "lucide-react";
-import { cookies } from "next/headers";
-import Link from "next/link";
 import { connection } from "next/server";
-import { preferenceCookieDomain, readTheme, THEME_COOKIE, ThemeToggle } from "@thebensage-dev/ui";
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import type { LegalBlock, LegalDoc } from "@/content/legal";
-import { site, siteUrl } from "@/content/site";
+import { headerProps } from "@/server/headerProps";
 
 /** Turns [text](https://…) into links and `name` into code; everything else stays plain text. */
 function renderText(text: string) {
@@ -52,23 +49,21 @@ function renderBlock(block: LegalBlock, key: number) {
 }
 
 /** The privacy notice and terms pages share this plain layout. */
-export default async function LegalPage({ doc }: { doc: LegalDoc }) {
+export default async function LegalPage({
+  doc,
+  path,
+}: {
+  doc: LegalDoc;
+  /** The page's own path, for the header's sign-in link back to it. */
+  path: string;
+}) {
   // Per request, like the home page, so the footer's STATUS_URL comes from the runtime env.
   await connection();
-  const theme = readTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const header = await headerProps(path);
 
   return (
     <>
-      <header className="mx-auto flex h-16 w-full max-w-3xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-foreground-muted hover:text-foreground"
-        >
-          <ArrowLeft className="size-4" aria-hidden />
-          {site.name}
-        </Link>
-        <ThemeToggle initialTheme={theme} cookieDomain={preferenceCookieDomain(siteUrl())} />
-      </header>
+      <SiteHeader {...header} />
 
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 pt-8 pb-20 sm:px-6">
         <span aria-hidden className="brand-rule" />

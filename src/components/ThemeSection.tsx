@@ -6,6 +6,7 @@ import {
   type ColourRole,
   type Colours,
   type Theme,
+  SectionHeading,
 } from "@thebensage-dev/ui";
 import { themeDemo } from "@/content/site";
 
@@ -99,13 +100,13 @@ export default function ThemeSection({
     <section id="theme" aria-labelledby="theme-title" className="scroll-mt-8">
       <div className="mx-auto grid max-w-5xl items-start gap-10 px-4 py-20 sm:px-6 sm:py-24 md:grid-cols-2">
         <div>
-          <p className="eyebrow tone-primary">{themeDemo.eyebrow}</p>
-          <h2 id="theme-title" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-            {themeDemo.title}
-          </h2>
-          <p className="mt-3 leading-relaxed text-pretty text-foreground-muted">
-            {themeDemo.intro}
-          </p>
+          <SectionHeading
+            id="theme-title"
+            eyebrow={themeDemo.eyebrow}
+            eyebrowTone="tone-primary"
+            title={themeDemo.title}
+            intro={themeDemo.intro}
+          />
 
           <div className="mt-8 grid gap-6">
             {access.member ? (

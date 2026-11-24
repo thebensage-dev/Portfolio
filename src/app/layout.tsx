@@ -12,6 +12,7 @@ import {
 } from "@thebensage-dev/ui";
 import { fontVariables } from "@/app/fonts";
 import { site, siteUrl } from "@/content/site";
+import { sharedOpenGraph, titleTemplate } from "@/lib/pageMetadata";
 import "./globals.css";
 
 // A function rather than a constant, so SITE_URL is read at runtime and one image works anywhere.
@@ -19,18 +20,13 @@ export function generateMetadata(): Metadata {
   const url = siteUrl();
   return {
     metadataBase: url ? new URL(url) : undefined,
-    title: { default: site.name, template: `%s · ${site.name}` },
+    title: { default: site.name, template: titleTemplate },
     description: site.headline,
     icons: { icon: { url: "/icon.svg", type: "image/svg+xml" } },
-    openGraph: {
-      type: "website",
-      siteName: site.name,
-      title: site.name,
-      description: site.headline,
-      url: url ?? undefined,
-      locale: "en_GB",
-    },
-    twitter: { card: "summary", title: site.name, description: site.headline },
+    // Defaults only: each page sets its own preview title, description and og:url through
+    // pageMetadata(). The preview image comes from opengraph-image.tsx / twitter-image.tsx.
+    openGraph: { ...sharedOpenGraph, title: site.name, description: site.headline },
+    twitter: { card: "summary_large_image", title: site.name, description: site.headline },
   };
 }
 

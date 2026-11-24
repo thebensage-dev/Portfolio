@@ -1,4 +1,4 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { NextResponse, userAgent, type NextRequest } from "next/server";
 import { SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
 
 // Automatic single sign-on: a signed-out visitor's page view first goes through a silent check
@@ -13,7 +13,10 @@ export function proxy(request: NextRequest) {
     headers.get("sec-fetch-mode") === "navigate" &&
     headers.get("sec-fetch-dest") === "document" &&
     !headers.has("next-router-prefetch") &&
-    !headers.has("rsc");
+    !headers.has("rsc") &&
+    // Search engines and link previews must get the page itself, not a hop to authentik (whose
+    // robots.txt disallows everything, so the page would never be indexed).
+    !userAgent(request).isBot;
   if (
     !pageLoad ||
     !process.env.OIDC_ISSUER_URL ||
