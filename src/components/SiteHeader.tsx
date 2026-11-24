@@ -36,9 +36,9 @@ export default function SiteHeader({
     { label: "Projects", href: "/#projects", icon: FolderKanban },
     { label: platformPages.overview.navLabel, href: platformPages.overview.path, icon: Server },
     { label: apiReference.navLabel, href: "/api-reference", icon: BookOpen },
-    { label: "GitHub", href: site.githubUrl, icon: FolderGit2, external: true },
-    { label: "Contact", href: `mailto:${site.email}`, icon: Mail, external: true },
     { label: "Colours", href: "/#theme", icon: Palette, wideOnly: true },
+    { label: "Contact", href: `mailto:${site.email}`, icon: Mail, external: true },
+    { label: "GitHub", href: site.githubUrl, icon: FolderGit2, external: true },
   ].map((item) => ({ ...item, current: isCurrent(item.href) }));
 
   return (

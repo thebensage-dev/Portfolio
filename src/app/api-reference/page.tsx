@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { connection } from "next/server";
 import { toneAt, toneClass } from "@thebensage-dev/ui";
 import ApiReference from "@/components/ApiReference";
+import PageIntro from "@/components/PageIntro";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { fetchApiSpec } from "@/lib/apiSpec";
@@ -41,50 +42,42 @@ export default async function ApiReferencePage() {
     <>
       <SiteHeader {...header} />
 
-      <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-8 pb-20 sm:px-6">
-        <div className="max-w-3xl">
-          <span aria-hidden className="brand-rule" />
-          <p className="eyebrow tone-primary mt-4">{apiReference.eyebrow}</p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-            {spec?.title ?? apiReference.title}
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-pretty text-foreground-muted">
-            {apiReference.intro}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {project && (
-              <a
-                href={`${projectUrl(project).replace(/\/$/, "")}/docs/`}
-                className="btn btn-primary"
-              >
-                {links.app}
-                <ArrowUpRight className="size-4" aria-hidden />
-              </a>
-            )}
-            {spec && (
-              <a
-                href={spec.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                <FileBraces className="size-4" aria-hidden />
-                {links.spec}
-              </a>
-            )}
-            {project && (
-              <a
-                href={project.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                <Code className="size-4" aria-hidden />
-                {links.source}
-              </a>
-            )}
-          </div>
-        </div>
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-20 sm:px-6">
+        <PageIntro
+          crumbs={[{ label: apiReference.title, path: "/api-reference" }]}
+          eyebrow={apiReference.eyebrow}
+          title={spec?.title ?? apiReference.title}
+          intro={apiReference.intro}
+        >
+          {project && (
+            <a href={`${projectUrl(project).replace(/\/$/, "")}/docs/`} className="btn btn-primary">
+              {links.app}
+              <ArrowUpRight className="size-4" aria-hidden />
+            </a>
+          )}
+          {spec && (
+            <a
+              href={spec.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+            >
+              <FileBraces className="size-4" aria-hidden />
+              {links.spec}
+            </a>
+          )}
+          {project && (
+            <a
+              href={project.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+            >
+              <Code className="size-4" aria-hidden />
+              {links.source}
+            </a>
+          )}
+        </PageIntro>
 
         <ul className="mt-12 grid gap-5 md:grid-cols-3">
           {apiReference.points.map(({ icon: Icon, title, description }, i) => (
