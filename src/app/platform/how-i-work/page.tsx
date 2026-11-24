@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
   path: page.path,
 });
 
-export default async function AgenticDevelopmentPage() {
+export default async function HowIWorkPage() {
   await connection(); // The header reads the sign-in settings from the runtime env.
   const header = await headerProps(page.path);
   const { workflow, practices, skill, links } = agenticPage;
@@ -42,7 +42,7 @@ export default async function AgenticDevelopmentPage() {
             href={links.claude.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn btn-ghost btn-sm"
           >
             {links.claude.label}
             <ArrowUpRight className="size-4" aria-hidden />

@@ -1,5 +1,5 @@
 // Wording for the platform pages (/platform, /platform/sign-in, /platform/email,
-// /platform/agentic-development). Keep it true to
+// /platform/how-i-work). Keep it true to
 // what is deployed: the sign-in details come from Infrastructure's authentik blueprint
 // (identity/authentik/blueprints/platform.yaml), the email details from its README and the
 // Grafana alert rules (monitoring/grafana/provisioning/alerting/rules.yaml).
@@ -7,7 +7,6 @@
 import {
   Activity,
   BellRing,
-  Bot,
   GitPullRequest,
   ScrollText,
   Split,
@@ -36,6 +35,7 @@ import {
   UserPlus,
   Users,
   type LucideIcon,
+  Workflow,
 } from "lucide-react";
 
 export type PlatformPage = {
@@ -79,13 +79,13 @@ export const platformPages = {
     icon: Mail,
   },
   agentic: {
-    path: "/platform/agentic-development",
-    navLabel: "Agentic development",
-    eyebrow: "Built with AI agents",
-    title: "Agentic development, with me in charge",
+    path: "/platform/how-i-work",
+    navLabel: "How I work",
+    eyebrow: "Engineering workflow",
+    title: "From idea to production",
     description:
-      "How I build with Claude Code: parallel agents on separate tasks, written house rules in every repo, real verification before anything ships, and every decision, review, commit and deploy left to me.",
-    icon: Bot,
+      "How I take a change from idea to production: clear outcomes, written house rules in every repo, real verification before anything ships, and every review, commit and deploy approved by me.",
+    icon: Workflow,
   },
 } satisfies Record<string, PlatformPage>;
 
@@ -338,7 +338,7 @@ export const emailPage = {
   preview: {
     title: "The “You're in” email",
     caption:
-      "Built from an HTML template with inline styles, in the same palette as the sites: the colours and the logo are generated from the design system when authentik's image is built.",
+      "Built from an HTML template with inline styles, in the same palette as the sites: the colours and the logo are generated from the design system when authentik's image is built. Next, I'm bringing the template design in-house, so it no longer relies only on authentik's own emails.",
     subject: "You're in: your User Directory access is approved",
     heading: "You're in",
     from: "TheBensage <noreply@thebensage.com>",
@@ -377,37 +377,37 @@ export const emailPage = {
   },
 };
 
-/** /platform/agentic-development */
+/** /platform/how-i-work */
 export const agenticPage = {
   intro:
-    "This platform was built with Claude Code as a team of AI agents working for me. I decide what gets built and how; the agents research, write the code and the guides, and check their own work. Nothing reaches a repo or production without me.",
+    "I design, build and run this platform myself. AI-assisted tooling speeds up the routine parts, the way linters and CI do, but the architecture, the decisions, the reviews and every deploy are mine.",
   workflow: {
     title: "How a change gets made",
     steps: [
       {
         icon: ListChecks,
         actor: "Me",
-        title: "Ask for an outcome",
+        title: "Define the outcome",
         description:
-          "I describe what I want in plain words, like “show the sign-up flow on the portfolio”. Each piece of work gets its own thread, so separate jobs don't tangle.",
+          "I start from what a change should achieve, like “show the sign-up flow on the portfolio”, and split it into separate pieces of work so unrelated jobs don't tangle.",
       },
       {
         icon: Split,
-        actor: "Agents",
-        title: "Work in parallel",
+        actor: "Me",
+        title: "Build it",
         description:
-          "Several agents can work at once on the same codebase, such as one improving search results while another builds these pages. They agree which files each one owns and tell each other when they finish.",
+          "I write and refine the code to the rules each repo sets out, using AI-assisted tooling for routine work such as boilerplate and first drafts.",
       },
       {
         icon: UserRoundCheck,
         actor: "Me",
         title: "Make the calls",
         description:
-          "When a choice changes the result, like the shape of this site, the agent stops and asks with a short set of options and a recommendation. I pick; it carries on.",
+          "When a choice changes the result, like the shape of this site, I weigh a short set of options and pick one. Design decisions don't get made by default.",
       },
       {
         icon: ShieldCheck,
-        actor: "Agents",
+        actor: "Checks",
         title: "Prove it works",
         description:
           "Format, lint and type checks, real production builds, workflow linting, screenshots at phone and desktop widths, and the whole platform run locally in Docker. “It parses” doesn't count as done.",
@@ -417,7 +417,7 @@ export const agenticPage = {
         actor: "Me",
         title: "Review, commit and approve",
         description:
-          "The agents never commit, push or deploy. I read the changes, commit them myself, and approve each production deploy in GitHub.",
+          "I read every change, commit it myself, and approve each production deploy in GitHub. Nothing ships on its own.",
       },
     ],
   },
@@ -428,45 +428,45 @@ export const agenticPage = {
         icon: ScrollText,
         title: "House rules in every repo",
         description:
-          "Each repo has a CLAUDE.md the agents read first: version pins and why, where content lives, the styling rules, how CI and deploys work, and hard lines such as never committing and never printing a token.",
+          "Each repo documents its version pins and why, where content lives, the styling rules, how CI and deploys work, and hard lines such as never printing a token, so every change starts from the same rules.",
       },
       {
         icon: Eye,
         title: "Checked against the source",
         description:
-          "Agents read the current docs before giving an instruction (Coolify's, for example, at the exact version I run), and re-read files rather than trust old notes, because other agents may have changed them.",
+          "Instructions are checked against the current docs at the exact version I run (Coolify's, for example), and files are re-read rather than trusting old notes.",
       },
       {
         icon: LockKeyhole,
         title: "Secrets stay with me",
         description:
-          "Tokens and passwords are typed by me into GitHub or a local file the agents never print. Production secrets sit behind an approval-gated environment, so no agent can deploy on its own.",
+          "Tokens and passwords are typed by me into GitHub or a local file that never gets printed. Production secrets sit behind an approval-gated environment, so nothing deploys without me.",
       },
       {
         icon: Wrench,
-        title: "Real tools, on my machine",
+        title: "Tested where it runs",
         description:
-          "With my approval, agents work in my repo folders, run the local Docker stack on my laptop, and use a browser to check pages, so the result is tested where it will run.",
+          "The whole platform runs locally in Docker on my laptop, and pages are checked in a real browser at phone and desktop widths before anything goes live.",
       },
       {
         icon: FileCode,
         title: "Guides you can follow",
         description:
-          "Besides code, the agents write step-by-step guides for anything I do by hand, like going live or switching email provider: one step at a time, exact values, nothing assumed.",
+          "Anything done by hand, like going live or switching email provider, gets a step-by-step guide: one step at a time, exact values, nothing assumed.",
       },
       {
         icon: Code,
-        title: "Shared memory",
+        title: "Decisions written down",
         description:
-          "Lasting decisions (the GitHub organisation, the email addresses, “never commit”) are saved to the project's memory, so the next agent starts from what's already settled instead of asking again.",
+          "Lasting decisions (the GitHub organisation, the email addresses, the deploy rules) are recorded, so later work picks up from what's already settled.",
       },
     ],
   },
   links: {
-    claude: { label: "About Claude Code", url: "https://claude.com/claude-code" },
+    claude: { label: "The AI tooling I use: Claude Code", url: "https://claude.com/claude-code" },
   },
   skill: {
     title: "Why it matters to a team",
-    body: "Agentic development is a skill like any other: breaking work into clear outcomes, writing down the rules, demanding evidence, and reviewing what comes back. Used that way, one developer can design, build, secure and run a platform this size, and every line of it is still mine to answer for.",
+    body: "The habits behind this are the ones a team needs: breaking work into clear outcomes, writing down the rules, demanding evidence, and reviewing everything before it ships. They let one developer design, build, secure and run a platform this size, and every line of it is mine to answer for.",
   },
 };

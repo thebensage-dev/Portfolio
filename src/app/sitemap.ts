@@ -15,7 +15,7 @@ const PAGES = [
   "/platform",
   "/platform/sign-in",
   "/platform/email",
-  "/platform/agentic-development",
+  "/platform/how-i-work",
   "/api-reference",
   "/privacy",
   "/terms",

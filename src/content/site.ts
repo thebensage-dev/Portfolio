@@ -58,7 +58,7 @@ export const site = {
   /** The part of the headline drawn in the brand gradient. */
   headlineHighlight: "from database to deployment",
   intro:
-    "I build full-stack applications: Next.js, React and TypeScript on the front end, .NET APIs on PostgreSQL behind them, and the infrastructure they run on, which I manage myself. Each project below is live.",
+    "I build full-stack applications: Next.js, React and TypeScript on the front end, .NET APIs on PostgreSQL behind them, and the infrastructure they run on, which I manage myself. Each project below is live, and all of the code is open source on GitHub.",
   footerTagline:
     "Full-stack web development with Next.js, React, TypeScript and .NET, self-hosted on a VPS I manage.",
   /** The GitHub organization that holds every repo; its page lists the public ones. */
@@ -131,6 +131,9 @@ export const projects: Project[] = [
 export const comingNext = {
   title: "Coming next",
   items: [
+    { name: "Payload CMS", detail: "Content management for the sites" },
+    { name: "Hangfire", detail: "Background jobs and scheduled work" },
+    { name: "Email templates", detail: "Designed in-house, not just authentik's" },
     { name: "RabbitMQ", detail: "Messaging between the API and the apps" },
     { name: "Stripe", detail: "Payments" },
   ],
