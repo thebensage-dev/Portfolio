@@ -6,15 +6,20 @@ import {
   Braces,
   Container,
   Eye,
+  FlaskConical,
   Gauge,
   GitBranch,
   Globe,
   KeyRound,
   Laptop,
   Mail,
+  MessagesSquare,
   Palette,
+  PenTool,
+  Repeat,
   Rocket,
   ScrollText,
+  Search,
   Server,
   ShieldCheck,
   Users,
@@ -65,6 +70,22 @@ export const site = {
   githubUrl: GITHUB_ORG,
   /** Public contact address (mailto links, privacy notice and terms). */
   email: "hello@thebensage.com",
+  /** The CV in public/; the proxy skips /cv/ so it downloads without the sign-on check. */
+  cv: {
+    path: "/cv/stephen-benson-developer.pdf",
+    label: "Download CV",
+    fileName: "Stephen-Benson-Developer.pdf",
+  },
+};
+
+/** Labels the header and footer share, so both name each link the same way. */
+export const navLabels = {
+  projects: "Projects",
+  colours: "Colours",
+  contact: "Contact",
+  github: "GitHub",
+  /** The platform overview, under the footer's "Platform" heading. */
+  overview: "Overview",
 };
 
 /** This site's public URL (SITE_URL, no trailing slash), read at request time. Used for link
@@ -101,13 +122,13 @@ export const projects: Project[] = [
   {
     title: "User Directory",
     description:
-      "Search, filter and manage a directory of people. Server Components read from TheBensage API, Server Actions send each edit with your sign-in token, and a card or table view remembers your choice.",
+      "Search, filter and manage a directory of people. Server Components read from the API, Server Actions send each edit with your sign-in token, and a card or table view remembers your choice.",
     tags: ["Next.js 16", "React 19", "Server Actions", "Tailwind v4"],
     url: { env: "USER_DIRECTORY_URL", fallback: "http://localhost:3000" },
     source: `${GITHUB_ORG}/UserDirectory`,
   },
   {
-    title: "TheBensage API",
+    title: "API",
     description:
       "A general-use REST API that the User Directory runs on. Its first feature is a people directory with accent-insensitive search, filters and paging in PostgreSQL, OpenAPI with interactive docs, and writes signed in through authentik and logged per change.",
     tags: [".NET", "Entity Framework Core", "PostgreSQL", "OpenAPI"],
@@ -360,13 +381,14 @@ export const apiReference = {
   /** Env var of the project whose API this is (see `projects`), and where it serves OpenAPI. */
   project: "API_URL",
   specPath: "/openapi/v1.json",
+  path: "/api-reference",
   navLabel: "API",
-  eyebrow: "TheBensage API",
+  eyebrow: "API",
   title: "API reference",
   description:
-    "Browse TheBensage API, the general-use .NET API the User Directory runs on: every endpoint, parameter, response and schema, generated from the OpenAPI document the live API serves.",
+    "Browse the API, the general-use .NET API the User Directory runs on: every endpoint, parameter, response and schema, generated from the OpenAPI document the live API serves.",
   intro:
-    "TheBensage API is a general-use REST API on PostgreSQL. For now it serves one feature, the people directory behind the User Directory, and more will run on it. This reference is generated from the OpenAPI document the running API publishes, so it always describes the version that is live.",
+    "The API is a general-use REST API on PostgreSQL. For now it serves one feature, the people directory behind the User Directory, and more will run on it. This reference is generated from the OpenAPI document the running API publishes, so it always describes the version that is live.",
   points: [
     {
       icon: Braces,
@@ -390,6 +412,122 @@ export const apiReference = {
   links: { app: "Open the interactive docs", spec: "OpenAPI document", source: "Source code" },
   unavailable: {
     title: "The reference isn't available right now",
-    description: "It appears here automatically as soon as TheBensage API is online.",
+    description: "It appears here automatically as soon as the API is online.",
+  },
+};
+
+/** The skills page (/skills) and its homepage section: the work around the code. */
+export const skillsPage = {
+  path: "/skills",
+  navLabel: "Skills",
+  eyebrow: "Beyond the code",
+  title: "From discovery to delivery",
+  description:
+    "How I work in a team: over five years in Agile teams, working with design and QA, testing in CI/CD, code review and mentoring.",
+  intro:
+    "I've worked in Agile teams for over five years, in Scrum, as a full stack developer. Alongside building features, I've been part of projects from discovery through to delivery, worked closely with design and QA, and reviewed code and mentored junior developers.",
+  skills: {
+    title: "What I bring to a team",
+    points: [
+      {
+        icon: Search,
+        title: "The whole project",
+        description:
+          "I've been part of teams taking client projects from discovery through to delivery, including learning platforms and multi-tenant sites.",
+        tags: ["Discovery", "Client projects"],
+      },
+      {
+        icon: PenTool,
+        title: "Working with design and QA",
+        description:
+          "My degree is in Digital Media and Interaction Design, and I work closely with designers and QA, building from Adobe XD and Figma designs, and I've worked on projects that included information architecture reviews and pattern libraries.",
+        tags: ["Adobe XD", "Figma", "Pattern library"],
+      },
+      {
+        icon: Eye,
+        title: "Accessibility and performance",
+        description:
+          "I build accessible, WCAG-compliant interfaces, and I've worked on sites where SEO and performance were part of the build, checked with Lighthouse.",
+        tags: ["WCAG", "Lighthouse", "SEO"],
+      },
+      {
+        icon: FlaskConical,
+        title: "Testing and CI/CD",
+        description:
+          "Testing and CI/CD are part of how I work. I've helped bring out-of-date test suites back to passing, and worked with automated pipelines in Azure DevOps and GitHub Actions.",
+        tags: ["xUnit", "Vitest", "Azure DevOps"],
+      },
+      {
+        icon: Repeat,
+        title: "Agile delivery",
+        description:
+          "I've worked in Scrum teams for over five years, in small product teams and in larger client programmes, and I've helped teams improve how they plan and track sprints.",
+        tags: ["Scrum", "Sprints", "DevOps"],
+      },
+      {
+        icon: MessagesSquare,
+        title: "Code review and mentoring",
+        description: "I review code and have mentored junior developers.",
+        tags: ["Code review", "Mentoring"],
+      },
+    ],
+  },
+  lifecycle: {
+    title: "How a project usually runs",
+    intro:
+      "The details change from team to team, but most of my projects have followed these steps.",
+    steps: [
+      {
+        title: "Discover",
+        description: "Understand what the client needs before the build starts.",
+      },
+      {
+        title: "Design",
+        description: "Work from the designs in Adobe XD or Figma, alongside the designers and QA.",
+      },
+      {
+        title: "Build",
+        description: "Deliver features in sprints, with code review along the way.",
+      },
+      {
+        title: "Test",
+        description:
+          "Run the tests automatically in the CI/CD pipeline, and audit sites with Lighthouse.",
+      },
+      {
+        title: "Release",
+        description: "Release through automated pipelines in Azure DevOps or GitHub Actions.",
+      },
+    ],
+  },
+  evidence: {
+    title: "See it on this site",
+    intro: "A few places on this site where you can see this way of working:",
+    items: [
+      {
+        target: "storybook",
+        title: "A shared component library",
+        body: "A React component library published as a package and documented in Storybook, used across the apps on this site.",
+        link: "Browse the components",
+      },
+      {
+        target: "accessFlow",
+        title: "A process, mapped out",
+        body: "The request-access flow laid out step by step, with who does each step and what each group unlocks.",
+        link: "See the access flow",
+      },
+      {
+        target: "howIWork",
+        title: "Decisions and guides, written down",
+        body: "How a change gets from an idea to production, and the house rules every repo follows.",
+        link: "How I work",
+      },
+    ] satisfies { target: "storybook" | "accessFlow" | "howIWork"; [key: string]: string }[],
+  },
+  teaser: {
+    title: "More than writing code",
+    intro:
+      "Over five years in Scrum teams, working with design and QA, testing in CI/CD, and reviewing code and mentoring.",
+    more: "See how I work in a team",
   },
 };

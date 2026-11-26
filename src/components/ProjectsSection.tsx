@@ -8,7 +8,7 @@ export default function ProjectsSection() {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="mx-auto max-w-5xl scroll-mt-8 px-4 pb-24 sm:px-6"
+      className="mx-auto max-w-5xl scroll-mt-8 px-4 py-section sm:px-6"
     >
       <SectionHeading
         id="projects-title"
@@ -16,7 +16,7 @@ export default function ProjectsSection() {
         eyebrowTone="tone-secondary"
         title="Selected work"
       />
-      <div className="mt-8 grid gap-5 md:grid-cols-2">
+      <div className="mt-content grid gap-5 md:grid-cols-2">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.title}

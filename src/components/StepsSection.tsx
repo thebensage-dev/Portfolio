@@ -18,11 +18,11 @@ export default function StepsSection({
   return (
     <section
       aria-labelledby={`${id}-title`}
-      className="mt-16 grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
+      className="mt-subsection grid gap-stack lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
     >
       <div className="lg:sticky lg:top-8 lg:self-start">
         <SectionHeading id={`${id}-title`} title={title} intro={intro} />
-        {children && <div className="mt-8">{children}</div>}
+        {children && <div className="mt-content">{children}</div>}
       </div>
       <StepTimeline steps={steps} label={title} />
     </section>

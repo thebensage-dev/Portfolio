@@ -30,7 +30,7 @@ export default async function PlatformPage() {
       <SiteHeader {...header} />
 
       <main className="flex-1">
-        <div className="mx-auto max-w-5xl px-4 pt-8 pb-16 sm:px-6">
+        <div className="mx-auto max-w-5xl px-4 pt-8 pb-section sm:px-6">
           <PageIntro
             crumbs={[{ label: page.navLabel, path: page.path }]}
             eyebrow={page.eyebrow}

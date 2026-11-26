@@ -42,11 +42,11 @@ export default async function ApiReferencePage() {
     <>
       <SiteHeader {...header} />
 
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-20 sm:px-6">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-section sm:px-6">
         <PageIntro
           crumbs={[{ label: apiReference.title, path: "/api-reference" }]}
           eyebrow={apiReference.eyebrow}
-          title={spec?.title ?? apiReference.title}
+          title={apiReference.title}
           intro={apiReference.intro}
         >
           {project && (
@@ -79,18 +79,18 @@ export default async function ApiReferencePage() {
           )}
         </PageIntro>
 
-        <ul className="mt-12 grid gap-5 md:grid-cols-3">
+        <ul className="mt-subsection grid gap-5 md:grid-cols-3">
           {apiReference.points.map(({ icon: Icon, title, description }, i) => (
             <li key={title} className={clsx("card tone-card p-6", toneClass(toneAt(i)))}>
               <Icon className="size-5 text-primary-ink" aria-hidden />
-              <h2 className="mt-3 font-semibold tracking-tight">{title}</h2>
+              <h2 className="title-card mt-3">{title}</h2>
               <p className="mt-2 text-sm leading-relaxed text-foreground-muted">{description}</p>
             </li>
           ))}
         </ul>
 
         {facts.length > 0 && (
-          <dl className="mt-10 grid gap-x-8 gap-y-4 border-y border-border py-6 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-stack grid gap-x-8 gap-y-4 border-y border-border py-6 sm:grid-cols-2 lg:grid-cols-4">
             {facts.map((fact) => (
               <div key={fact.label}>
                 <dt className="eyebrow">{fact.label}</dt>
@@ -100,7 +100,7 @@ export default async function ApiReferencePage() {
           </dl>
         )}
 
-        <section aria-label={apiReference.title} className="mt-10">
+        <section aria-label={apiReference.title} className="mt-stack">
           {spec ? (
             <div className="card overflow-hidden">
               <ApiReference content={spec.content} />

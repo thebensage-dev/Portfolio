@@ -10,7 +10,7 @@ export default function StackSection() {
       aria-labelledby="stack-title"
       className="scroll-mt-8 border-y border-border bg-surface-muted/40"
     >
-      <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-5xl px-4 py-section sm:px-6">
         <SectionHeading
           id="stack-title"
           eyebrow="Behind the scenes"
@@ -19,9 +19,13 @@ export default function StackSection() {
           intro={stack.intro}
         />
 
-        <FlowSteps steps={stack.pipeline} label="From a push to your browser" className="mt-10" />
+        <FlowSteps
+          steps={stack.pipeline}
+          label="From a push to your browser"
+          className="mt-stack"
+        />
 
-        <FeatureGrid features={stack.pieces} className="mt-12" />
+        <FeatureGrid features={stack.pieces} className="mt-stack" />
 
         <ToolList />
       </div>

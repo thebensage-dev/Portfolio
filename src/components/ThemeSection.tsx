@@ -38,9 +38,7 @@ function PaletteLocked({ access }: { access: PaletteAccess }) {
           <LockKeyhole aria-hidden />
         </span>
         <div>
-          <p className="font-semibold tracking-tight">
-            {signedIn ? locked.memberTitle : locked.title}
-          </p>
+          <p className="title-card">{signedIn ? locked.memberTitle : locked.title}</p>
           <p className="mt-1 text-sm leading-relaxed text-foreground-muted">
             {signedIn ? locked.memberBody : locked.body}
           </p>
@@ -98,7 +96,7 @@ export default function ThemeSection({
 
   return (
     <section id="theme" aria-labelledby="theme-title" className="scroll-mt-8">
-      <div className="mx-auto grid max-w-5xl items-start gap-10 px-4 py-20 sm:px-6 sm:py-24 md:grid-cols-2">
+      <div className="mx-auto grid max-w-5xl items-start gap-stack px-4 py-section sm:px-6 md:grid-cols-2">
         <div>
           <SectionHeading
             id="theme-title"
@@ -108,7 +106,7 @@ export default function ThemeSection({
             intro={themeDemo.intro}
           />
 
-          <div className="mt-8 grid gap-6">
+          <div className="mt-content grid gap-6">
             {access.member ? (
               <ColourPicker
                 initialColours={colours}
@@ -126,7 +124,7 @@ export default function ThemeSection({
             </div>
           </div>
 
-          <p className="mt-8 text-sm text-foreground-muted">{themeDemo.note}</p>
+          <p className="mt-content text-sm text-foreground-muted">{themeDemo.note}</p>
         </div>
 
         <figure className="card reveal-on-scroll p-6 md:sticky md:top-8" aria-label={preview.title}>

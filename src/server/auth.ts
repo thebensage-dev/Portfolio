@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { EncryptJWT, jwtDecrypt } from "jose";
 import { cookies } from "next/headers";
 import * as oidc from "openid-client";
-import { SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
+import { RETURNING_COOKIE, SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
 
 // Server-only: sign-in through authentik (OpenID Connect, authorization code + PKCE), the same way
 // as the User Directory. The site is public; signing in unlocks the colour palette for members.
@@ -10,8 +10,8 @@ import { SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
 // from the token's `groups` claim: portfolio-members (or authentik Admins) are members. Someone
 // signed in without it gets a link to authentik's shared "Request access" page.
 //
-// Single sign-on: src/proxy.ts sends a signed-out visitor's page view through a silent check
-// (prompt=none). authentik answers at once, with a code when it has a session and with
+// Single sign-on: src/proxy.ts sends a signed-out page view from a browser that has signed in
+// here before through a silent check (prompt=none). authentik answers at once, with a code when it has a session and with
 // error=login_required when it hasn't, and either way the visitor lands back on the same page.
 //
 // The session is an encrypted cookie (no session table) with the name, email and groups. The
@@ -26,6 +26,7 @@ const LOGIN_COOKIE = "pf_login";
 const SESSION_HOURS = 8;
 /** How long to wait before checking again after a check found no authentik session. */
 const SSO_RECHECK_MINUTES = 10;
+const RETURNING_DAYS = 365;
 /** authentik's answers to prompt=none that just mean "not signed in here". */
 const SILENT_MISSES = new Set(["login_required", "consent_required", "interaction_required"]);
 
@@ -222,6 +223,7 @@ export async function completeLogin(search: string): Promise<string> {
     ),
     cookieOptions(env, SESSION_HOURS * 3600),
   );
+  jar.set(RETURNING_COOKIE, "1", cookieOptions(env, RETURNING_DAYS * 86400));
   jar.delete(SSO_CHECKED_COOKIE);
   return returnTo;
 }

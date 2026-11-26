@@ -92,11 +92,11 @@ export const platformPages = {
 /** The API reference (/api-reference) as a card next to the deep dives on /platform. */
 export const apiReferenceCard: PlatformPage = {
   path: "/api-reference",
-  navLabel: "API reference",
-  eyebrow: "TheBensage API",
+  navLabel: "API",
+  eyebrow: "API",
   title: "API reference",
   description:
-    "Every endpoint of TheBensage API, generated from the OpenAPI document the live API serves.",
+    "Every endpoint of the API, generated from the OpenAPI document the live API serves.",
   icon: BookOpen,
 };
 
@@ -122,7 +122,7 @@ export const platformTeaser = {
 };
 
 /** /platform: what runs where. `env` names the env var holding the public URL (as in `projects`);
- *  entries without one are shown without a link. */
+ *  `page` links to a page on this site instead; entries with neither are shown without a link. */
 export const platformMap = {
   title: "What runs where",
   intro:
@@ -130,7 +130,13 @@ export const platformMap = {
   apps: [
     { host: "thebensage.com", name: "Portfolio", detail: "This site", env: "SITE_URL" },
     { host: "users.", name: "User Directory", detail: "Next.js app", env: "USER_DIRECTORY_URL" },
-    { host: "api.", name: "TheBensage API", detail: ".NET and PostgreSQL", env: "API_URL" },
+    {
+      host: "api.",
+      name: "API",
+      detail: ".NET and PostgreSQL",
+      env: "API_URL",
+      page: "/api-reference",
+    },
     { host: "ui.", name: "Storybook", detail: "The shared components", env: "STORYBOOK_URL" },
     { host: "id.", name: "authentik", detail: "Sign-in for every app" },
     { host: "grafana.", name: "Grafana", detail: "Metrics, logs and alerts" },

@@ -32,7 +32,7 @@ export default function DeepDiveCards({
             <span className="icon-tile">
               <Icon aria-hidden />
             </span>
-            <span className="font-semibold tracking-tight">{navLabel}</span>
+            <span className="title-card">{navLabel}</span>
             <span className="text-sm leading-relaxed text-foreground-muted">{description}</span>
             <span className="mt-auto flex items-center gap-1 pt-1 text-sm font-semibold text-primary-ink">
               Read more

@@ -8,6 +8,7 @@ import PlatformTeaser from "@/components/PlatformTeaser";
 import ProjectsSection from "@/components/ProjectsSection";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import SkillsTeaser from "@/components/SkillsTeaser";
 import ThemeSection from "@/components/ThemeSection";
 import { projectUrl, projects, site, siteUrl } from "@/content/site";
 import { pageMetadata } from "@/lib/pageMetadata";
@@ -45,6 +46,7 @@ export default async function Home() {
       <main id="top" className="flex-1">
         <HomeHero />
         <ProjectsSection />
+        <SkillsTeaser />
         <PlatformTeaser />
         <ThemeSection
           theme={header.theme}

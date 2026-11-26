@@ -28,7 +28,7 @@ export default async function HowIWorkPage() {
     <>
       <SiteHeader {...header} />
 
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-20 sm:px-6">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-section sm:px-6">
         <PageIntro
           crumbs={[
             { label: platformPages.overview.navLabel, path: platformPages.overview.path },

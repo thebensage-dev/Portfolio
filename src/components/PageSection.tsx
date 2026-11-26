@@ -5,7 +5,7 @@ export default function PageSection({
   id,
   title,
   intro,
-  className = "mt-16",
+  className = "mt-subsection",
   children,
 }: {
   /** Prefix for the heading's id (`<id>-title`). */
@@ -18,7 +18,7 @@ export default function PageSection({
   return (
     <section aria-labelledby={`${id}-title`} className={className}>
       <SectionHeading id={`${id}-title`} title={title} intro={intro} />
-      <div className="mt-8">{children}</div>
+      <div className="mt-content">{children}</div>
     </section>
   );
 }

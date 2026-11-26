@@ -17,7 +17,7 @@ export type LegalDoc = {
   sections: LegalSection[];
 };
 
-const UPDATED = "23 November 2026";
+const UPDATED = "25 November 2026";
 
 export const privacy: LegalDoc = {
   title: "Privacy notice",
@@ -44,7 +44,7 @@ export const privacy: LegalDoc = {
       body: [
         "The sites use only cookies that are strictly necessary or that store a setting you chose. No analytics, advertising or third-party tracking cookies are used, so no consent is required.",
         [
-          "**Sign-in:** session cookies set by the User Directory (`ud_session`, `ud_login`, and `ud_sso_checked`, which remembers for a few minutes that you aren't signed in), this site (`pf_session`, `pf_login` and `pf_sso_checked`, the same jobs for the main site's sign-in), the sign-in service and the monitoring dashboards while you are signed in.",
+          "**Sign-in:** session cookies set by the User Directory (`ud_session`, `ud_login`, and `ud_sso_checked`, which remembers for a few minutes that you aren't signed in), this site (`pf_session`, `pf_login` and `pf_sso_checked`, the same jobs for the main site's sign-in, plus `pf_returning`, kept for one year after you sign in so the site only checks for an existing sign-in in browsers that have used it), the sign-in service and the monitoring dashboards while you are signed in.",
           "**Preferences:** your light or dark theme (`theme`), the three brand colours you picked on the main site (`colours`, one value such as `teal.sky.mint`) and the User Directory's card or table view (`view`), kept for one year. The theme and colours are shared between the main site and its subdomains (the User Directory and the component library), so your choice applies on each site.",
           "**Cookie notice:** records that you dismissed the cookie notice (`cookie-notice`), kept for one year.",
         ],

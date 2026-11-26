@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 // Every public page. Keep in step with src/app: no sign-in routes, redirects or 404s.
 const PAGES = [
   "",
+  "/skills",
   "/platform",
   "/platform/sign-in",
   "/platform/email",

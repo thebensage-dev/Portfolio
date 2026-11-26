@@ -33,7 +33,7 @@ export default async function EmailPage() {
     <>
       <SiteHeader {...header} />
 
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-20 sm:px-6">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-8 pb-section sm:px-6">
         <PageIntro
           crumbs={[
             { label: platformPages.overview.navLabel, path: platformPages.overview.path },
@@ -71,11 +71,11 @@ export default async function EmailPage() {
 
         <section
           aria-labelledby="senders-title"
-          className="mt-16 grid items-start gap-10 lg:grid-cols-2"
+          className="mt-subsection grid items-start gap-stack lg:grid-cols-2"
         >
           <div>
             <SectionHeading id="senders-title" title={senders.title} />
-            <div className="mt-8 grid gap-5">
+            <div className="mt-content grid gap-5">
               {[senders.authentik, senders.grafana].map((sender, i) => (
                 <SenderCard key={sender.title} {...sender} tone={toneAt(i)} />
               ))}

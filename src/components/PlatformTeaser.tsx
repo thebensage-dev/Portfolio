@@ -13,7 +13,7 @@ export default function PlatformTeaser() {
       aria-labelledby="platform-title"
       className="scroll-mt-8 border-y border-border bg-surface-muted/40"
     >
-      <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-5xl px-4 py-section sm:px-6">
         <SectionHeading
           id="platform-title"
           eyebrow={platformTeaser.eyebrow}
@@ -22,7 +22,7 @@ export default function PlatformTeaser() {
           intro={platformTeaser.intro}
         />
 
-        <ul className="mt-10 grid grid-cols-3 gap-4 border-y border-border py-6">
+        <ul className="mt-stack grid grid-cols-3 gap-4 border-y border-border py-6">
           {platformTeaser.highlights.map(({ value, label }) => (
             <li key={label} className="text-center sm:text-left">
               <span className="gradient-text block text-3xl font-bold tracking-tight sm:text-4xl">
@@ -33,9 +33,12 @@ export default function PlatformTeaser() {
           ))}
         </ul>
 
-        <DeepDiveCards pages={[overview, ...deepDives]} className="mt-10" />
+        <DeepDiveCards pages={[overview, ...deepDives]} className="mt-stack" />
 
-        <Link href={overview.path} className="link mt-8 inline-flex items-center gap-1 text-sm">
+        <Link
+          href={overview.path}
+          className="link mt-content inline-flex items-center gap-1 text-sm"
+        >
           {platformTeaser.overviewLabel}
           <ArrowRight className="size-4" aria-hidden />
         </Link>

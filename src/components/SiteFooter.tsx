@@ -1,14 +1,15 @@
 import { Activity, Mail } from "lucide-react";
 import { Footer, type FooterLink } from "@thebensage-dev/ui";
 import { deepDives, platformPages } from "@/content/platform";
-import { projectHref, projects, site, statusUrl } from "@/content/site";
+import { navLabels, projectHref, projects, site, skillsPage, statusUrl } from "@/content/site";
 
-/** Footer for every page. The page must render per request, so env URLs are read at runtime. */
+/** Footer for every page, in the header's order and with its labels. The page must render per
+ *  request, so env URLs are read at runtime. */
 export default function SiteFooter() {
   const status = statusUrl();
   const contact: FooterLink[] = [
-    { label: "Email", href: `mailto:${site.email}`, icon: Mail },
-    { label: "GitHub", href: site.githubUrl, external: true },
+    { label: site.email, href: `mailto:${site.email}`, icon: Mail },
+    { label: navLabels.github, href: site.githubUrl, external: true },
   ];
   if (status) contact.push({ label: "Live status", href: status, icon: Activity });
 
@@ -18,17 +19,29 @@ export default function SiteFooter() {
       tagline={site.footerTagline}
       groups={[
         {
-          title: "Projects",
-          links: projects.map((project) => ({ label: project.title, href: projectHref(project) })),
-        },
-        {
-          title: "Platform",
+          title: navLabels.projects,
           links: [
-            { label: "How it works", href: platformPages.overview.path },
-            ...deepDives.map((page) => ({ label: page.navLabel, href: page.path })),
+            ...projects.map((project) => ({ label: project.title, href: projectHref(project) })),
+            { label: navLabels.colours, href: "/#theme" },
           ],
         },
-        { title: "Contact", links: contact },
+        {
+          title: "About",
+          links: [
+            { label: skillsPage.navLabel, href: skillsPage.path },
+            { label: platformPages.agentic.navLabel, href: platformPages.agentic.path },
+          ],
+        },
+        {
+          title: platformPages.overview.navLabel,
+          links: [
+            { label: navLabels.overview, href: platformPages.overview.path },
+            ...deepDives
+              .filter((page) => page !== platformPages.agentic)
+              .map((page) => ({ label: page.navLabel, href: page.path })),
+          ],
+        },
+        { title: navLabels.contact, links: contact },
       ]}
       legal={[
         { label: "Privacy", href: "/privacy" },

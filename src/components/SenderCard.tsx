@@ -23,7 +23,7 @@ export default function SenderCard({
           <Icon aria-hidden />
         </span>
         <div>
-          <h3 className="font-semibold tracking-tight">{title}</h3>
+          <h3 className="title-card">{title}</h3>
           <p className="text-sm text-foreground-muted">{description}</p>
         </div>
       </div>

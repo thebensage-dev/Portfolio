@@ -1,8 +1,8 @@
-import { BookOpen, FolderGit2, FolderKanban, Mail, Palette, Server } from "lucide-react";
+import { BookOpen, Compass, FolderGit2, FolderKanban, Mail, Palette, Server } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader as SharedSiteHeader, type SiteNavItem, type Theme } from "@thebensage-dev/ui";
 import { platformPages } from "@/content/platform";
-import { apiReference, site, themeDemo } from "@/content/site";
+import { apiReference, navLabels, site, skillsPage, themeDemo } from "@/content/site";
 import type { SiteUser } from "@/server/auth";
 
 /**
@@ -33,12 +33,13 @@ export default function SiteHeader({
       : false;
 
   const nav: SiteNavItem[] = [
-    { label: "Projects", href: "/#projects", icon: FolderKanban },
+    { label: navLabels.projects, href: "/#projects", icon: FolderKanban },
+    { label: skillsPage.navLabel, href: skillsPage.path, icon: Compass },
     { label: platformPages.overview.navLabel, href: platformPages.overview.path, icon: Server },
-    { label: apiReference.navLabel, href: "/api-reference", icon: BookOpen },
-    { label: "Colours", href: "/#theme", icon: Palette, wideOnly: true },
-    { label: "Contact", href: `mailto:${site.email}`, icon: Mail, external: true },
-    { label: "GitHub", href: site.githubUrl, icon: FolderGit2, external: true },
+    { label: apiReference.navLabel, href: apiReference.path, icon: BookOpen },
+    { label: navLabels.colours, href: "/#theme", icon: Palette, wideOnly: true },
+    { label: navLabels.contact, href: `mailto:${site.email}`, icon: Mail, external: true },
+    { label: navLabels.github, href: site.githubUrl, icon: FolderGit2, external: true },
   ].map((item) => ({ ...item, current: isCurrent(item.href) }));
 
   return (

@@ -15,10 +15,7 @@ export default function HomeHero() {
       <div className="mx-auto max-w-3xl px-4 pt-20 pb-24 text-center sm:px-6 sm:pt-28 sm:pb-32">
         <span aria-hidden className="brand-rule reveal mx-auto" />
         <p className="eyebrow reveal mt-5">{site.role}</p>
-        <h1
-          className="reveal mt-5 text-4xl font-bold tracking-tight text-balance sm:text-6xl"
-          style={{ animationDelay: "80ms" }}
-        >
+        <h1 className="title-display reveal mt-5" style={{ animationDelay: "80ms" }}>
           {headlineEnd === undefined ? (
             site.headline
           ) : (

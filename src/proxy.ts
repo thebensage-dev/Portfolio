@@ -1,11 +1,12 @@
 import { NextResponse, userAgent, type NextRequest } from "next/server";
-import { SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
+import { RETURNING_COOKIE, SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
 
-// Automatic single sign-on: a signed-out visitor's page view first goes through a silent check
-// with authentik (/auth/login?silent=1, see src/server/auth.ts). Someone already signed in to
-// authentik comes back signed in; everyone else comes back to the same page, signed out, with no
-// error. It only runs for real page loads in a browser (Sec-Fetch headers), never for prefetches,
-// uptime checks or crawlers, and pauses after each check (SSO_CHECKED_COOKIE).
+// Automatic single sign-on: a signed-out page view from a browser that has signed in here before
+// (RETURNING_COOKIE) first goes through a silent check with authentik (/auth/login?silent=1, see
+// src/server/auth.ts). Someone still signed in to authentik comes back signed in; everyone else
+// comes back to the same page, signed out, with no error. It only runs for real page loads in a
+// browser (Sec-Fetch headers), never for new visitors, AI agents, prefetches, uptime checks or
+// crawlers, and pauses after each check (SSO_CHECKED_COOKIE).
 export function proxy(request: NextRequest) {
   const { cookies, headers, method, nextUrl } = request;
   const pageLoad =
@@ -20,6 +21,7 @@ export function proxy(request: NextRequest) {
   if (
     !pageLoad ||
     !process.env.OIDC_ISSUER_URL ||
+    !cookies.has(RETURNING_COOKIE) ||
     cookies.has(SESSION_COOKIE) ||
     cookies.has(SSO_CHECKED_COOKIE)
   ) {
@@ -34,6 +36,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Pages only: not the sign-in routes themselves, Next's files, the favicon or robots/sitemap.
-  matcher: ["/((?!auth/|_next/|icon\.svg|favicon\.ico|robots\.txt|sitemap\.xml).*)"],
+  // Pages only: not the sign-in routes, Next's files, the CV, the favicon or robots/sitemap.
+  matcher: ["/((?!auth/|_next/|cv/|icon\.svg|favicon\.ico|robots\.txt|sitemap\.xml).*)"],
 };

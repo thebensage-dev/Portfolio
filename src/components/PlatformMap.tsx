@@ -10,12 +10,12 @@ function appUrl(env?: string): string | undefined {
   return env === "SITE_URL" ? siteUrl() : process.env[env] || undefined;
 }
 
-/** Each subdomain and what runs there; the public ones link to the live app. Render per request. */
+/** Each subdomain and what runs there; the public ones link to the live app, or to their page here. Render per request. */
 export default function PlatformMap() {
   return (
     <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {platformMap.apps.map(({ host, name, detail, env }, i) => {
-        const url = appUrl(env);
+      {platformMap.apps.map(({ host, name, detail, env, page }, i) => {
+        const url = page ?? appUrl(env);
         const body = (
           <>
             <span className="tone-dot mt-1.5 shrink-0" aria-hidden />

@@ -65,7 +65,7 @@ export default async function LegalPage({
     <>
       <SiteHeader {...header} />
 
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pt-8 pb-20 sm:px-6">
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pt-8 pb-section sm:px-6">
         <span aria-hidden className="brand-rule" />
         <p className="eyebrow tone-primary mt-4">Last updated {doc.updated}</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{doc.title}</h1>
