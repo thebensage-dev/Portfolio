@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { alt, contentType, size } from "@/app/opengraph-image";
-import { site } from "@/content/site";
+import { contentType, size } from "@/app/opengraph-image";
+import type { Settings } from "@/lib/cms";
 
-/** Page titles read "<page> · TheBensage"; the homepage is just the site name. */
-export const titleTemplate = `%s · ${site.name}`;
+/** Page titles read "<page> · <site name>"; the homepage is just the site name. */
+export const titleTemplate = (settings: Settings) => `%s · ${settings.name}`;
 
 /** The link-preview fields every page shares (the root layout's defaults use them too). */
-export const sharedOpenGraph = { type: "website", siteName: site.name, locale: "en_GB" } as const;
+export const sharedOpenGraph = (settings: Settings) =>
+  ({ type: "website", siteName: settings.name, locale: "en_GB" }) as const;
+
+/** The preview image's alt text. */
+export const previewAlt = (settings: Settings) => `${settings.name}: ${settings.headline}`;
 
 /**
  * A page's metadata: its title, description and canonical, repeated as its own link preview
@@ -15,26 +19,29 @@ export const sharedOpenGraph = { type: "website", siteName: site.name, locale: "
  * A page's own openGraph/twitter replaces the layout's, file-based preview image included, so the
  * image (app/opengraph-image.tsx and app/twitter-image.tsx) is named here again.
  */
-export function pageMetadata({
-  title,
-  description,
-  path,
-}: {
-  /** Omit on the homepage, which uses the site name. */
-  title?: string;
-  /** Omit to keep the site's headline. */
-  description?: string;
-  path: string;
-}): Metadata {
-  const fullTitle = title ? titleTemplate.replace("%s", title) : site.name;
-  const previewDescription = description ?? site.headline;
-  const image = (url: string) => ({ url, alt, type: contentType, ...size });
+export function pageMetadata(
+  settings: Settings,
+  {
+    title,
+    description,
+    path,
+  }: {
+    /** Omit on the homepage, which uses the site name. */
+    title?: string;
+    /** Omit to keep the site's headline. */
+    description?: string;
+    path: string;
+  },
+): Metadata {
+  const fullTitle = title ? titleTemplate(settings).replace("%s", title) : settings.name;
+  const previewDescription = description ?? settings.headline;
+  const image = (url: string) => ({ url, alt: previewAlt(settings), type: contentType, ...size });
   return {
     ...(title && { title }),
     ...(description && { description }),
     alternates: { canonical: path },
     openGraph: {
-      ...sharedOpenGraph,
+      ...sharedOpenGraph(settings),
       title: fullTitle,
       description: previewDescription,
       url: path,

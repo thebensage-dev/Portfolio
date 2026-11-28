@@ -1,21 +1,28 @@
 import clsx from "clsx";
 import { ArrowUpRight } from "lucide-react";
 import { toneAt, toneClass } from "@thebensage-dev/ui";
-import { platformMap } from "@/content/platform";
-import { siteUrl } from "@/content/site";
+import type { Block } from "@thebensage-dev/cms-client";
+import { pageById, type Content } from "@/lib/cms";
+import { envUrl } from "@/lib/env";
 
-/** Reads an app's public URL from the env at request time (`SITE_URL` for this site). */
-function appUrl(env?: string): string | undefined {
-  if (!env) return undefined;
-  return env === "SITE_URL" ? siteUrl() : process.env[env] || undefined;
-}
-
-/** Each subdomain and what runs there; the public ones link to the live app, or to their page here. Render per request. */
-export default function PlatformMap() {
+/** Each subdomain and what runs there; the public ones link to the live app, or to their page
+ *  here. Render per request. */
+export default function PlatformMap({
+  apps,
+  content,
+}: {
+  apps: Block<"platformMap">["apps"];
+  content: Content;
+}) {
   return (
     <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {platformMap.apps.map(({ host, name, detail, env, page }, i) => {
-        const url = page ?? appUrl(env);
+      {apps.map(({ id, host, name, detail, address, page }, i) => {
+        const url =
+          address === "page"
+            ? pageById(content, page)?.path
+            : address && address !== "none"
+              ? envUrl(address)
+              : undefined;
         const body = (
           <>
             <span className="tone-dot mt-1.5 shrink-0" aria-hidden />
@@ -34,7 +41,7 @@ export default function PlatformMap() {
         );
         const className = clsx("card flex h-full items-start gap-3 p-4", toneClass(toneAt(i)));
         return (
-          <li key={host}>
+          <li key={id ?? host}>
             {url ? (
               <a href={url} className={clsx(className, "group tone-card")}>
                 {body}

@@ -3,6 +3,7 @@ import { EncryptJWT, jwtDecrypt } from "jose";
 import { cookies } from "next/headers";
 import * as oidc from "openid-client";
 import { RETURNING_COOKIE, SESSION_COOKIE, SSO_CHECKED_COOKIE } from "@/lib/authCookies";
+import { trimSlash } from "@/lib/env";
 
 // Server-only: sign-in through authentik (OpenID Connect, authorization code + PKCE), the same way
 // as the User Directory. The site is public; signing in unlocks the colour palette for members.
@@ -54,10 +55,16 @@ function readEnv(): AuthEnv | null {
     issuer,
     clientId,
     clientSecret,
-    appUrl: appUrl.replace(/\/$/, ""),
+    appUrl: trimSlash(appUrl),
     secret,
-    internalUrl: internalUrl?.replace(/\/$/, "") || undefined,
+    internalUrl: internalUrl ? trimSlash(internalUrl) || undefined : undefined,
   };
+}
+
+function requireEnv(): AuthEnv {
+  const env = readEnv();
+  if (!env) throw new Error("Sign-in isn't configured (see .env.example).");
+  return env;
 }
 
 /** True when the OIDC variables are set, so the sign-in button can work. */
@@ -65,17 +72,29 @@ export function authConfigured(): boolean {
   return readEnv() !== null;
 }
 
-/** authentik's "Your account" page (blueprint flow `account`): name, email and password. */
-export function accountUrl(): string | null {
-  const env = readEnv();
-  return env ? new URL("/if/flow/account/?app=portfolio", env.issuer).href : null;
+/** One of authentik's flow pages (from the blueprint), opened for this app. */
+function flowUrl(
+  env: AuthEnv,
+  flow: "account" | "request-access" | "sign-out",
+  app = "portfolio",
+): string {
+  return new URL(`/if/flow/${flow}/?app=${encodeURIComponent(app)}`, env.issuer).href;
 }
 
-/** authentik's shared "Request access" page with Portfolio ticked (blueprint flow `request-access`). */
-export function requestAccessUrl(): string | null {
+/** authentik's "Your account" page: name, email and password. */
+export function accountUrl(): string | null {
   const env = readEnv();
-  return env ? new URL("/if/flow/request-access/?app=portfolio", env.issuer).href : null;
+  return env ? flowUrl(env, "account") : null;
 }
+
+/** authentik's shared "Request access" page with Portfolio (or `app`, such as "cms") ticked. */
+export function requestAccessUrl(app?: string): string | null {
+  const env = readEnv();
+  return env ? flowUrl(env, "request-access", app) : null;
+}
+
+/** The `groups` claim as strings; anything else counts as no groups. */
+const groupsOf = (value: unknown): string[] => (Array.isArray(value) ? value.map(String) : []);
 
 // Cookies are encrypted with a key derived from AUTH_SECRET.
 const keyFor = (secret: string) => createHash("sha256").update(secret).digest();
@@ -156,8 +175,7 @@ export function safeReturnTo(value: string | null | undefined): string {
  * (prompt=none) never shows a page: authentik sends the browser straight back either way.
  */
 export async function beginLogin(returnTo: string, { silent = false } = {}): Promise<URL> {
-  const env = readEnv();
-  if (!env) throw new Error("Sign-in isn't configured (see .env.example).");
+  const env = requireEnv();
   const jar = await cookies();
   // Set first: if authentik can't be reached, the visitor still gets the page.
   if (silent) jar.set(SSO_CHECKED_COOKIE, "1", cookieOptions(env, SSO_RECHECK_MINUTES * 60));
@@ -183,8 +201,7 @@ export async function beginLogin(returnTo: string, { silent = false } = {}): Pro
 
 /** Finishes a sign-in from authentik's redirect. Returns where to send the person next. */
 export async function completeLogin(search: string): Promise<string> {
-  const env = readEnv();
-  if (!env) throw new Error("Sign-in isn't configured (see .env.example).");
+  const env = requireEnv();
   const jar = await cookies();
   const pending = await unseal(jar.get(LOGIN_COOKIE)?.value, env.secret);
   jar.delete(LOGIN_COOKIE);
@@ -206,7 +223,7 @@ export async function completeLogin(search: string): Promise<string> {
   const claims = tokens.claims();
   if (!claims) throw new Error("authentik didn't return an ID token.");
 
-  const groups = Array.isArray(claims.groups) ? claims.groups.map(String) : [];
+  const groups = groupsOf(claims.groups);
   jar.set(
     SESSION_COOKIE,
     await seal(
@@ -234,7 +251,7 @@ export async function currentUser(): Promise<SiteUser | null> {
   if (!env) return null;
   const payload = await unseal((await cookies()).get(SESSION_COOKIE)?.value, env.secret);
   if (typeof payload?.sub !== "string") return null;
-  const groups = Array.isArray(payload.groups) ? payload.groups.map(String) : [];
+  const groups = groupsOf(payload.groups);
   return {
     sub: payload.sub,
     name: String(payload.name ?? ""),
@@ -251,7 +268,7 @@ export async function currentUser(): Promise<SiteUser | null> {
 export async function signOut(): Promise<string> {
   (await cookies()).delete(SESSION_COOKIE);
   const env = readEnv();
-  return env ? new URL("/if/flow/sign-out/?app=portfolio", env.issuer).href : "/";
+  return env ? flowUrl(env, "sign-out") : "/";
 }
 
 /**

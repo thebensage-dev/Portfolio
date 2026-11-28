@@ -1,17 +1,20 @@
 import { ImageResponse } from "next/og";
 import { LOGO, palette } from "@thebensage-dev/ui";
-import { site } from "@/content/site";
+import { getContent } from "@/lib/cms";
 
-// The link preview image (og:image, and twitter:image via twitter-image.tsx), rendered at build
-// time in the palette's dark colours. Next fills in the absolute URL from metadataBase.
-export const alt = `${site.name}: ${site.headline}`;
+// The link preview image (og:image, and twitter:image via twitter-image.tsx) in the palette's dark
+// colours, with the name, role and headline from the CMS. Drawn per request (the CMS client keeps
+// the content for a minute), so an edit shows up without a rebuild. Next fills in the absolute URL
+// from metadataBase; each page names the alt text (pageMetadata).
+export const dynamic = "force-dynamic";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const { Neutrals, Brand } = palette;
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
   const { tile, lines, lineHeight } = LOGO;
+  const { settings: site } = await getContent();
   return new ImageResponse(
     <div
       style={{

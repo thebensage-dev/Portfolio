@@ -1,8 +1,10 @@
-import { signInPage } from "@/content/platform";
+import type { Block } from "@thebensage-dev/cms-client";
 
 /** Which group unlocks what in each app. A table from `sm` up; on phones each row is a small card. */
-export default function AccessTable() {
-  const { columns, rows } = signInPage.access;
+export default function AccessTable({
+  columns,
+  rows,
+}: Pick<Block<"accessTable">, "columns" | "rows">) {
   return (
     <div className="card overflow-hidden">
       <table className="w-full text-left text-sm">
@@ -21,7 +23,7 @@ export default function AccessTable() {
         </thead>
         <tbody className="divide-y divide-border">
           {rows.map((row) => (
-            <tr key={row.app} className="max-sm:grid max-sm:gap-1 max-sm:p-5">
+            <tr key={row.id ?? row.app} className="max-sm:grid max-sm:gap-1 max-sm:p-5">
               <th scope="row" className="font-semibold sm:px-5 sm:py-4">
                 {row.app}
               </th>

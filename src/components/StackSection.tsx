@@ -1,33 +1,35 @@
 import { FeatureGrid, FlowSteps, SectionHeading } from "@thebensage-dev/ui";
+import type { Block } from "@thebensage-dev/cms-client";
 import ToolList from "@/components/ToolList";
-import { stack } from "@/content/site";
+import { features, flowSteps } from "@/lib/blockData";
 
-/** The pipeline, every piece of the platform and the tools behind it (on /platform). */
-export default function StackSection() {
+/** The pipeline, every piece of the platform and the tools behind it (full width, on /platform). */
+export default function StackSection({ block }: { block: Block<"stack"> }) {
+  const { anchor } = block;
   return (
     <section
-      id="stack"
-      aria-labelledby="stack-title"
+      id={anchor}
+      aria-labelledby={`${anchor}-title`}
       className="scroll-mt-8 border-y border-border bg-surface-muted/40"
     >
       <div className="mx-auto max-w-5xl px-4 py-section sm:px-6">
         <SectionHeading
-          id="stack-title"
-          eyebrow="Behind the scenes"
+          id={`${anchor}-title`}
+          eyebrow={block.eyebrow ?? undefined}
           eyebrowTone="tone-accent"
-          title={stack.title}
-          intro={stack.intro}
+          title={block.title}
+          intro={block.intro ?? undefined}
         />
 
         <FlowSteps
-          steps={stack.pipeline}
-          label="From a push to your browser"
+          steps={flowSteps(block.pipeline)}
+          label={block.pipelineLabel}
           className="mt-stack"
         />
 
-        <FeatureGrid features={stack.pieces} className="mt-stack" />
+        <FeatureGrid features={features(block.pieces)} className="mt-stack" />
 
-        <ToolList />
+        <ToolList title={block.toolsTitle} groups={block.toolGroups ?? []} />
       </div>
     </section>
   );

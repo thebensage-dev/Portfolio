@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { connection } from "next/server";
-import { siteUrl } from "@/content/site";
+import { siteUrl } from "@/lib/env";
 
 export default async function robots(): Promise<MetadataRoute.Robots> {
   await connection(); // SITE_URL is read at runtime, not baked in at build time.

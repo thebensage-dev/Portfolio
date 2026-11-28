@@ -1,45 +1,64 @@
 import clsx from "clsx";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { SectionHeading, toneAt, toneClass } from "@thebensage-dev/ui";
-import { skillsPage } from "@/content/site";
+import { SectionHeading, toneAt, toneClass, iconOrDot } from "@thebensage-dev/ui";
+import type { Block, Page } from "@thebensage-dev/cms-client";
+import { sectionClass } from "@/components/GeneralSection";
+import ArrowLink from "@/components/ArrowLink";
+import { pageById, type Content } from "@/lib/cms";
 
-/** The homepage's short list of the skills around the code, linking to /skills. */
-export default function SkillsTeaser() {
-  const { teaser, skills } = skillsPage;
+/** A short list of another page's cards (its first card grid), linking to it: on the homepage,
+ *  the skills around the code. */
+export default function SkillsTeaser({
+  block,
+  content,
+  page,
+}: {
+  block: Block<"pageTeaser">;
+  content: Content;
+  /** The page it's on: its width decides the section's layout. */
+  page: Page;
+}) {
+  const target = pageById(content, block.page);
+  const grid = target?.layout?.find((item) => item.blockType === "cardGrid");
+  const { anchor } = block;
   return (
     <section
-      id="skills"
-      aria-labelledby="skills-title"
-      className="mx-auto max-w-5xl scroll-mt-8 px-4 pb-section sm:px-6"
+      id={anchor}
+      aria-labelledby={`${anchor}-title`}
+      className={clsx(
+        "scroll-mt-8",
+        sectionClass(page, "mx-auto max-w-5xl px-4 pb-section sm:px-6"),
+      )}
     >
       <SectionHeading
-        id="skills-title"
-        eyebrow={skillsPage.eyebrow}
+        id={`${anchor}-title`}
+        eyebrow={block.eyebrow ?? undefined}
         eyebrowTone="tone-primary"
-        title={teaser.title}
-        intro={teaser.intro}
+        title={block.title}
+        intro={block.intro ?? undefined}
       />
-      <ul className="mt-content grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {skills.points.map(({ icon: Icon, title }, i) => (
-          <li
-            key={title}
-            className={clsx("card flex items-center gap-3 p-4", toneClass(toneAt(i)))}
-          >
-            <span className="icon-tile">
-              <Icon aria-hidden />
-            </span>
-            <span className="title-card">{title}</span>
-          </li>
-        ))}
-      </ul>
-      <Link
-        href={skillsPage.path}
-        className="link mt-content inline-flex items-center gap-1 text-sm"
-      >
-        {teaser.more}
-        <ArrowRight className="size-4" aria-hidden />
-      </Link>
+      {grid && (
+        <ul className="mt-content grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {(grid.items ?? []).map((item, i) => {
+            const Icon = iconOrDot(item.icon);
+            return (
+              <li
+                key={item.id ?? item.title}
+                className={clsx("card flex items-center gap-3 p-4", toneClass(toneAt(i)))}
+              >
+                <span className="icon-tile">
+                  <Icon aria-hidden />
+                </span>
+                <span className="title-card">{item.title}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      {target && (
+        <ArrowLink href={target.path} className="mt-content">
+          {block.linkLabel}
+        </ArrowLink>
+      )}
     </section>
   );
 }

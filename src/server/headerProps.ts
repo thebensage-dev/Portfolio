@@ -1,11 +1,13 @@
 import { cookies } from "next/headers";
 import { preferenceCookieDomain, readTheme, THEME_COOKIE } from "@thebensage-dev/ui";
-import { siteUrl } from "@/content/site";
+import { siteUrl } from "@/lib/env";
 import { accountUrl, authConfigured, currentUser } from "@/server/auth";
 
 /** /auth/login, coming back to `returnTo` (a path on this site). */
 export const signInHref = (returnTo: string) =>
   `/auth/login?returnTo=${encodeURIComponent(returnTo)}`;
+
+export type HeaderProps = Awaited<ReturnType<typeof headerProps>>;
 
 /** What `SiteHeader` needs on any page: the theme, the signed-in user and the sign-in link back to
  *  `returnTo`. Reads cookies, so the page renders per request. */
