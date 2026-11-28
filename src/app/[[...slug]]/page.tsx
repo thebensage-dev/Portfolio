@@ -6,22 +6,27 @@ import { connection } from "next/server";
 import { COLOURS_COOKIE, JsonLd, readColours } from "@thebensage-dev/ui";
 import type { LayoutBlock, Page } from "@thebensage-dev/cms-client";
 import PageShell from "@/components/layout/PageShell";
-import { RenderBlocks } from "@thebensage-dev/cms-client/react";
-import { BLOCKS, FULL_WIDTH } from "@/blocks/registry";
-import type { BlockContext } from "@/blocks/types";
-import { fetchApiSpec } from "@/lib/apiSpec";
+import {
+  FULL_WIDTH_BLOCKS,
+  GENERAL_BLOCKS as BLOCKS,
+  RenderBlocks,
+  fetchApiSpec,
+  type BlockContext,
+} from "@thebensage-dev/cms-client/react";
+import ApiReference from "@/components/ApiReference";
 import {
   cmsPublicUrl,
   findPage,
   getContent,
   projectById,
+  projectUrl,
   resolveLink,
   type Content,
 } from "@/server/cms";
-import { siteUrl } from "@/lib/env";
+import { envUrl, siteUrl } from "@/lib/env";
 import { pageMetadata } from "@/lib/pageMetadata";
 import { requestAccessUrl } from "@/server/auth";
-import { headerProps } from "@/server/headerProps";
+import { headerProps, signInHref } from "@/server/headerProps";
 
 // Every page comes from the CMS: its path picks the page, its layout lists the blocks (a page
 // header or legal header block usually first), and its width lays out the column. A page added
@@ -56,14 +61,17 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 async function apiSpecFor(content: Content, page: Page) {
   const block = page.layout?.find((item) => item.blockType === "apiReference");
   const project = block && projectById(content, block.project);
-  return project ? fetchApiSpec(project, block.specPath) : null;
+  // Inside Docker the API's public hostname may point at this container: API_INTERNAL_URL.
+  return project
+    ? fetchApiSpec(projectUrl(project), block.specPath, process.env.API_INTERNAL_URL)
+    : null;
 }
 
 /** Splits the blocks into runs: ordinary blocks share the centred column, full-width ones don't. */
 function runs(blocks: LayoutBlock[]) {
   const out: { full: boolean; blocks: LayoutBlock[] }[] = [];
   for (const block of blocks) {
-    const full = FULL_WIDTH.has(block.blockType);
+    const full = FULL_WIDTH_BLOCKS.has(block.blockType);
     const last = out.at(-1);
     if (last && !last.full && !full) last.blocks.push(block);
     else out.push({ full, blocks: [block] });
@@ -101,17 +109,24 @@ export default async function CmsPage(props: Props) {
   const ctx: BlockContext = {
     content,
     page,
-    header,
     path,
-    title: page.title,
-    colours: readColours((await cookies()).get(COLOURS_COOKIE)?.value),
+    theme: {
+      theme: header.theme,
+      colours: readColours((await cookies()).get(COLOURS_COOKIE)?.value),
+      cookieDomain: header.cookieDomain,
+    },
     apiSpec,
+    apiViewer: ApiReference,
+    projectUrl,
+    envUrl,
     resolveLink: (link) => resolveLink(content, link, { apiSpecUrl: apiSpec?.url }),
     mediaUrl: cmsPublicUrl(),
     siteUrl: siteUrl(),
     access: {
       signedIn: header.user !== null,
+      member: header.user?.member ?? false,
       signInHref: header.signInHref,
+      signInHrefFor: header.signInHref ? signInHref : undefined,
       requestAccessHref: requestAccessUrl() ?? undefined,
     },
   };

@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import snapshot from "@/content/cms-snapshot.json";
-import { BLOCKS, FULL_WIDTH } from "@/blocks/registry";
+import {
+  FULL_WIDTH_BLOCKS as FULL_WIDTH,
+  GENERAL_BLOCKS as BLOCKS,
+} from "@thebensage-dev/cms-client/react";
 import type { Content } from "@/server/cms";
 
 // The snapshot is the site's content as the CMS last served it (npm run content:snapshot).
