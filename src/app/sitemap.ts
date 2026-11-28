@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { connection } from "next/server";
-import { getContent } from "@/lib/cms";
+import { getContent } from "@/server/cms";
 import { siteUrl } from "@/lib/env";
 
 // Every published page in the CMS that is marked "List in the sitemap".

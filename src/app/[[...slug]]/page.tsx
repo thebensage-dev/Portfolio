@@ -5,14 +5,22 @@ import { notFound } from "next/navigation";
 import { connection } from "next/server";
 import { COLOURS_COOKIE, JsonLd, readColours } from "@thebensage-dev/ui";
 import type { LayoutBlock, Page } from "@thebensage-dev/cms-client";
-import PageShell from "@/components/PageShell";
-import { FULL_WIDTH } from "@/blocks/registry";
+import PageShell from "@/components/layout/PageShell";
+import { RenderBlocks } from "@thebensage-dev/cms-client/react";
+import { BLOCKS, FULL_WIDTH } from "@/blocks/registry";
 import type { BlockContext } from "@/blocks/types";
-import RenderBlocks from "@/components/RenderBlocks";
 import { fetchApiSpec } from "@/lib/apiSpec";
-import { findPage, getContent, projectById, type Content } from "@/lib/cms";
+import {
+  cmsPublicUrl,
+  findPage,
+  getContent,
+  projectById,
+  resolveLink,
+  type Content,
+} from "@/server/cms";
 import { siteUrl } from "@/lib/env";
 import { pageMetadata } from "@/lib/pageMetadata";
+import { requestAccessUrl } from "@/server/auth";
 import { headerProps } from "@/server/headerProps";
 
 // Every page comes from the CMS: its path picks the page, its layout lists the blocks (a page
@@ -98,7 +106,14 @@ export default async function CmsPage(props: Props) {
     title: page.title,
     colours: readColours((await cookies()).get(COLOURS_COOKIE)?.value),
     apiSpec,
-    links: { apiSpecUrl: apiSpec?.url },
+    resolveLink: (link) => resolveLink(content, link, { apiSpecUrl: apiSpec?.url }),
+    mediaUrl: cmsPublicUrl(),
+    siteUrl: siteUrl(),
+    access: {
+      signedIn: header.user !== null,
+      signInHref: header.signInHref,
+      requestAccessHref: requestAccessUrl() ?? undefined,
+    },
   };
   const blocks = page.layout ?? [];
   const dotGrid = page.backdrop === "dotGrid" && (
@@ -113,7 +128,7 @@ export default async function CmsPage(props: Props) {
         {home}
         <PageShell header={header} className={clsx("flex-1", dotGrid && "relative")} id="top">
           {dotGrid}
-          <RenderBlocks blocks={blocks} ctx={ctx} />
+          <RenderBlocks blocks={blocks} registry={BLOCKS} ctx={ctx} />
         </PageShell>
       </>
     );
@@ -129,7 +144,7 @@ export default async function CmsPage(props: Props) {
         {home}
         <PageShell header={header} className={clsx(column, "flex-1", dotGrid && "relative")}>
           {dotGrid}
-          <RenderBlocks blocks={blocks} ctx={ctx} />
+          <RenderBlocks blocks={blocks} registry={BLOCKS} ctx={ctx} />
         </PageShell>
       </>
     );
@@ -143,10 +158,10 @@ export default async function CmsPage(props: Props) {
         {dotGrid}
         {parts.map((part, i) =>
           part.full ? (
-            <RenderBlocks key={i} blocks={part.blocks} ctx={ctx} />
+            <RenderBlocks key={i} blocks={part.blocks} registry={BLOCKS} ctx={ctx} />
           ) : (
             <div key={i} className={column}>
-              <RenderBlocks blocks={part.blocks} ctx={ctx} />
+              <RenderBlocks blocks={part.blocks} registry={BLOCKS} ctx={ctx} />
             </div>
           ),
         )}

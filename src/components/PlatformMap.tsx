@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { ArrowUpRight } from "lucide-react";
 import { toneAt, toneClass } from "@thebensage-dev/ui";
 import type { Block } from "@thebensage-dev/cms-client";
-import { pageById, type Content } from "@/lib/cms";
+import { pageById, type Content } from "@/server/cms";
 import { envUrl } from "@/lib/env";
 
 /** Each subdomain and what runs there; the public ones link to the live app, or to their page

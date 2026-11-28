@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContent } from "@/lib/cms";
+import { getContent } from "@/server/cms";
 
 export default async function NotFound() {
   const { notFound } = (await getContent()).settings;

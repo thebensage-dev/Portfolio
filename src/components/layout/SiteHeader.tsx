@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SiteHeader as SharedSiteHeader, type SiteNavItem, iconOrDot } from "@thebensage-dev/ui";
-import { getContent, resolveLink } from "@/lib/cms";
+import { getContent, resolveLink } from "@/server/cms";
 import type { HeaderProps } from "@/server/headerProps";
 
 /** True for the current page's link, and for the platform link on its sub-pages. */

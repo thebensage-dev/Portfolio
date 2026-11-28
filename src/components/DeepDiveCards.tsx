@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { toneAt, toneClass, iconOrDot } from "@thebensage-dev/ui";
 import type { Page } from "@thebensage-dev/cms-client";
-import { pageById, type Content } from "@/lib/cms";
+import { pageById, type Content } from "@/server/cms";
 
 /** Links to other pages, as cards (each page's card name, summary and icon from the CMS): the
  *  whole card is the link. */

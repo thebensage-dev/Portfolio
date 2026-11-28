@@ -7,7 +7,7 @@
       "title": "TheBensage",
       "layout": [
         {
-          "id": "6b0a0af86fc5e3000125b1fe",
+          "id": "6b0a1d3d2374b900010f1b24",
           "role": "Full-stack developer · Next.js · .NET",
           "headline": "Web applications, from database to deployment.",
           "highlight": "from database to deployment",
@@ -15,7 +15,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0af86fc5e3000125b1fb",
+              "id": "6b0a1d3d2374b900010f1b21",
               "label": "View projects",
               "style": "primary",
               "size": "default",
@@ -34,7 +34,7 @@
               }
             },
             {
-              "id": "6b0a0af86fc5e3000125b1fc",
+              "id": "6b0a1d3d2374b900010f1b22",
               "label": "Get in touch",
               "style": "accent",
               "size": "default",
@@ -53,7 +53,7 @@
               }
             },
             {
-              "id": "6b0a0af86fc5e3000125b1fd",
+              "id": "6b0a1d3d2374b900010f1b23",
               "label": "How it's built",
               "style": "secondary",
               "size": "default",
@@ -75,7 +75,7 @@
           "blockType": "homeHero"
         },
         {
-          "id": "6b0a0af86fc5e3000125b203",
+          "id": "6b0a1d3d2374b900010f1b29",
           "anchor": "projects",
           "eyebrow": "Projects",
           "title": "Selected work",
@@ -85,22 +85,22 @@
             "title": "Coming next",
             "items": [
               {
-                "id": "6b0a0af86fc5e3000125b1ff",
+                "id": "6b0a1d3d2374b900010f1b25",
                 "name": "Hangfire",
                 "detail": "Background jobs and scheduled work"
               },
               {
-                "id": "6b0a0af86fc5e3000125b200",
+                "id": "6b0a1d3d2374b900010f1b26",
                 "name": "Email templates",
                 "detail": "Designed in-house, not just authentik's"
               },
               {
-                "id": "6b0a0af86fc5e3000125b201",
+                "id": "6b0a1d3d2374b900010f1b27",
                 "name": "RabbitMQ",
                 "detail": "Messaging between the API and the apps"
               },
               {
-                "id": "6b0a0af86fc5e3000125b202",
+                "id": "6b0a1d3d2374b900010f1b28",
                 "name": "Stripe",
                 "detail": "Payments"
               }
@@ -115,7 +115,7 @@
           }
         },
         {
-          "id": "6b0a0af86fc5e3000125b204",
+          "id": "6b0a1d3d2374b900010f1b2a",
           "anchor": "skills",
           "eyebrow": "Beyond the code",
           "title": "More than writing code",
@@ -126,7 +126,7 @@
           "blockType": "pageTeaser"
         },
         {
-          "id": "6b0a0af86fc5e3000125b208",
+          "id": "6b0a1d3d2374b900010f1b2e",
           "anchor": "platform",
           "eyebrow": "Behind the scenes",
           "title": "The platform under the projects",
@@ -137,17 +137,17 @@
           "blockName": null,
           "highlights": [
             {
-              "id": "6b0a0af86fc5e3000125b205",
+              "id": "6b0a1d3d2374b900010f1b2b",
               "value": "7",
               "label": "apps live on one VPS"
             },
             {
-              "id": "6b0a0af86fc5e3000125b206",
+              "id": "6b0a1d3d2374b900010f1b2c",
               "value": "1",
               "label": "account for every app"
             },
             {
-              "id": "6b0a0af86fc5e3000125b207",
+              "id": "6b0a1d3d2374b900010f1b2d",
               "value": "0",
               "label": "settings typed into the server"
             }
@@ -161,7 +161,7 @@
           ]
         },
         {
-          "id": "6b0a0af86fc5e3000125b209",
+          "id": "6b0a1d3d2374b900010f1b2f",
           "anchor": "theme",
           "eyebrow": "Try the design system",
           "title": "Make the brand your own",
@@ -249,7 +249,7 @@
         "title": null,
         "description": null
       },
-      "updatedAt": "2026-11-27T22:58:00.989Z",
+      "updatedAt": "2026-11-28T01:42:47.533Z",
       "createdAt": "2026-11-27T22:57:58.775Z",
       "_status": "published"
     },
@@ -259,7 +259,7 @@
       "title": "API reference",
       "layout": [
         {
-          "id": "6b0a0afb6fc5e3000125b2bb",
+          "id": "6b0a1d432374b900010f1be1",
           "eyebrow": "API",
           "heading": null,
           "intro": "The API is a general-use REST API on PostgreSQL. For now it serves one feature, the users behind the User Directory, and more will run on it. This reference is generated from the OpenAPI document the running API publishes, so it always describes the version that is live.",
@@ -268,7 +268,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afb6fc5e3000125b2b8",
+              "id": "6b0a1d432374b900010f1bde",
               "label": "Open the interactive docs",
               "style": "primary",
               "size": "default",
@@ -287,7 +287,7 @@
               }
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2b9",
+              "id": "6b0a1d432374b900010f1bdf",
               "label": "OpenAPI document",
               "style": "secondary",
               "size": "default",
@@ -306,7 +306,7 @@
               }
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2ba",
+              "id": "6b0a1d432374b900010f1be0",
               "label": "Source code",
               "style": "secondary",
               "size": "default",
@@ -328,26 +328,26 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2bf",
+          "id": "6b0a1d432374b900010f1be5",
           "project": 2,
           "specPath": "/openapi/v1.json",
           "loading": "Loading the reference…",
           "blockName": null,
           "points": [
             {
-              "id": "6b0a0afb6fc5e3000125b2bc",
+              "id": "6b0a1d432374b900010f1be2",
               "icon": "Braces",
               "title": "One source of truth",
               "description": "The OpenAPI document comes straight from the deployed API, not a copy kept in this site. When the API changes, this page changes with it."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2bd",
+              "id": "6b0a1d432374b900010f1be3",
               "icon": "Eye",
               "title": "Browse-only",
               "description": "Explore endpoints, parameters, responses and schemas, and copy example requests in several languages. Sending requests from this page is turned off."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2be",
+              "id": "6b0a1d432374b900010f1be4",
               "icon": "Palette",
               "title": "Same design system",
               "description": "Scalar renders the reference, themed with the shared palette and fonts, so it follows your light or dark choice like the rest of the site."
@@ -395,7 +395,7 @@
         "title": "API reference",
         "description": "Browse the API, the general-use .NET API the User Directory runs on: every endpoint, parameter, response and schema, generated from the OpenAPI document the live API serves."
       },
-      "updatedAt": "2026-11-27T22:58:03.845Z",
+      "updatedAt": "2026-11-28T01:42:47.714Z",
       "createdAt": "2026-11-27T22:58:00.087Z",
       "_status": "published"
     },
@@ -405,7 +405,7 @@
       "title": "How the platform works",
       "layout": [
         {
-          "id": "6b0a0af96fc5e3000125b21f",
+          "id": "6b0a1d3e2374b900010f1b45",
           "eyebrow": "The platform",
           "heading": null,
           "intro": "The self-hosted platform behind every project: one VPS, Coolify, approval-gated CI/CD, single sign-on, a CMS, monitoring, logs and email, all set up as code.",
@@ -414,7 +414,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0af96fc5e3000125b21e",
+              "id": "6b0a1d3e2374b900010f1b44",
               "label": "Infrastructure on GitHub",
               "style": "secondary",
               "size": "default",
@@ -436,14 +436,14 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0af96fc5e3000125b227",
+          "id": "6b0a1d3e2374b900010f1b4d",
           "anchor": "map",
           "title": "What runs where",
           "intro": "Every app has its own subdomain and its own Coolify app on the same VPS. Cloudflare answers DNS, and Coolify's proxy routes each name to its container with an HTTPS certificate.",
           "blockName": null,
           "apps": [
             {
-              "id": "6b0a0af96fc5e3000125b220",
+              "id": "6b0a1d3e2374b900010f1b46",
               "host": "thebensage.com",
               "name": "Portfolio",
               "detail": "This site",
@@ -451,7 +451,7 @@
               "page": null
             },
             {
-              "id": "6b0a0af96fc5e3000125b221",
+              "id": "6b0a1d3e2374b900010f1b47",
               "host": "users.",
               "name": "User Directory",
               "detail": "Next.js app",
@@ -459,7 +459,7 @@
               "page": null
             },
             {
-              "id": "6b0a0af96fc5e3000125b222",
+              "id": "6b0a1d3e2374b900010f1b48",
               "host": "api.",
               "name": "API",
               "detail": ".NET and PostgreSQL",
@@ -467,7 +467,7 @@
               "page": 10
             },
             {
-              "id": "6b0a0af96fc5e3000125b223",
+              "id": "6b0a1d3e2374b900010f1b49",
               "host": "ui.",
               "name": "Storybook",
               "detail": "The shared components",
@@ -475,7 +475,7 @@
               "page": null
             },
             {
-              "id": "6b0a0af96fc5e3000125b224",
+              "id": "6b0a1d3e2374b900010f1b4a",
               "host": "id.",
               "name": "authentik",
               "detail": "Sign-in for every app",
@@ -483,7 +483,7 @@
               "page": null
             },
             {
-              "id": "6b0a0af96fc5e3000125b225",
+              "id": "6b0a1d3e2374b900010f1b4b",
               "host": "grafana.",
               "name": "Grafana",
               "detail": "Metrics, logs and alerts",
@@ -491,7 +491,7 @@
               "page": null
             },
             {
-              "id": "6b0a0af96fc5e3000125b226",
+              "id": "6b0a1d3e2374b900010f1b4c",
               "host": "cms.",
               "name": "CMS",
               "detail": "Payload: the sites' content",
@@ -502,7 +502,7 @@
           "blockType": "platformMap"
         },
         {
-          "id": "6b0a0af96fc5e3000125b228",
+          "id": "6b0a1d3e2374b900010f1b4e",
           "anchor": "deep-dives",
           "title": "Take a closer look",
           "intro": null,
@@ -517,7 +517,7 @@
           ]
         },
         {
-          "id": "6b0a0af96fc5e3000125b25a",
+          "id": "6b0a1d3e2374b900010f1b80",
           "anchor": "stack",
           "eyebrow": "Behind the scenes",
           "title": "Every piece, and the tools behind it",
@@ -527,25 +527,25 @@
           "blockName": null,
           "pipeline": [
             {
-              "id": "6b0a0af96fc5e3000125b229",
+              "id": "6b0a1d3e2374b900010f1b4f",
               "icon": "GitBranch",
               "title": "Pull request",
               "detail": "One open-source repo per project"
             },
             {
-              "id": "6b0a0af96fc5e3000125b22a",
+              "id": "6b0a1d3e2374b900010f1b50",
               "icon": "Workflow",
               "title": "GitHub Actions",
               "detail": "Checks, tests, Docker image, approval"
             },
             {
-              "id": "6b0a0af96fc5e3000125b22b",
+              "id": "6b0a1d3e2374b900010f1b51",
               "icon": "Container",
               "title": "Coolify",
               "detail": "Pulls the approved image and deploys"
             },
             {
-              "id": "6b0a0af96fc5e3000125b22c",
+              "id": "6b0a1d3e2374b900010f1b52",
               "icon": "Globe",
               "title": "Cloudflare",
               "detail": "DNS for the domain and subdomains"
@@ -553,7 +553,7 @@
           ],
           "pieces": [
             {
-              "id": "6b0a0af96fc5e3000125b22d",
+              "id": "6b0a1d3e2374b900010f1b53",
               "icon": "Server",
               "title": "Self-hosted VPS",
               "description": "One IONOS VPS runs everything. Coolify manages each project as its own app, with HTTPS certificates handled by its proxy.",
@@ -563,7 +563,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b22e",
+              "id": "6b0a1d3e2374b900010f1b54",
               "icon": "Container",
               "title": "Docker builds",
               "description": "Every app ships as a lean multi-stage Docker image, built once in CI, so the image I approve is exactly the one that goes live.",
@@ -573,7 +573,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b22f",
+              "id": "6b0a1d3e2374b900010f1b55",
               "icon": "Rocket",
               "title": "CI/CD",
               "description": "GitHub Actions checks every pull request and push, and builds the Docker image. A green build on main deploys only after a reviewer approves it, and the pipeline sends every setting to the server, so nothing is configured by hand.",
@@ -583,7 +583,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b230",
+              "id": "6b0a1d3e2374b900010f1b56",
               "icon": "Blocks",
               "title": "One design system",
               "description": "One npm package gives every site the same components, motion and brand, documented in Storybook on its own subdomain. Every colour is defined once, by role (surface, primary, danger…), in a single file: the sites, Storybook, the sign-in pages and the emails are all generated from it, so changing the palette there changes it everywhere.",
@@ -594,7 +594,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b231",
+              "id": "6b0a1d3e2374b900010f1b57",
               "icon": "KeyRound",
               "title": "Single sign-on",
               "description": "My own authentik instance signs you in to every site over OpenID Connect: sign in once for all of them, sign out once from all of them. Passkeys and two-factor, group-based access, one “Request access” page that I approve app by app (with emails at each step) and single-use invite links for guests, all set up from a versioned blueprint.",
@@ -604,7 +604,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b232",
+              "id": "6b0a1d3e2374b900010f1b58",
               "icon": "Activity",
               "title": "Monitoring and alerts",
               "description": "Prometheus collects metrics from the server, each container and HTTPS checks on every site. Grafana charts them and emails me when a site goes down, slows down or a certificate is about to expire.",
@@ -616,7 +616,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b233",
+              "id": "6b0a1d3e2374b900010f1b59",
               "icon": "ScrollText",
               "title": "Centralised logs",
               "description": "Alloy gathers the output of every container and stores it in Loki, so errors from any app can be searched in the same Grafana, next to the metrics.",
@@ -627,7 +627,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b234",
+              "id": "6b0a1d3e2374b900010f1b5a",
               "icon": "Mail",
               "title": "Email",
               "description": "Access requests, approvals and alerts go out through SMTP2GO from noreply@, on a verified domain with its DNS records in Cloudflare. The public addresses are forwarded by Cloudflare Email Routing, and every setting comes from the pipeline.",
@@ -637,7 +637,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b235",
+              "id": "6b0a1d3e2374b900010f1b5b",
               "icon": "Gauge",
               "title": "Public status page",
               "description": "A read-only Grafana dashboard anyone can open shows each site's status, uptime and response time, and the server's CPU, memory and disk, from the same checks that send the alerts. It's linked in the footer as Live status.",
@@ -647,7 +647,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b236",
+              "id": "6b0a1d3e2374b900010f1b5c",
               "icon": "Users",
               "title": "Ready for a team",
               "description": "Every project lives in one GitHub organization, in the open. Main is protected by a ruleset (pull requests must pass CI, no force pushes), and production secrets sit behind an approval-gated environment, so only a reviewed deploy can read them. Shared settings are set once for the whole organization, and each repo derives the rest, so a new teammate or a new project needs no secrets copied around.",
@@ -658,7 +658,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b237",
+              "id": "6b0a1d3e2374b900010f1b5d",
               "icon": "PenTool",
               "title": "Content in a CMS",
               "description": "Every page, menu, link and setting of these sites is edited in my own Payload CMS, as blocks that match the sites' components, with drafts, versions and a preview before anything goes live. Editors sign in through authentik, and the sites keep their last copy, so they stay up if the CMS is down.",
@@ -669,7 +669,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b238",
+              "id": "6b0a1d3e2374b900010f1b5e",
               "icon": "ShieldCheck",
               "title": "Security by default",
               "description": "HTTPS everywhere with HSTS and security headers, sign-in through authentik with passkeys, two-factor and group-based roles for the admin tools and for editing, and no public ports for internal services. Secrets stay out of git and out of Docker images, and image versions are pinned and updated through reviewed Dependabot PRs.",
@@ -681,7 +681,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b239",
+              "id": "6b0a1d3e2374b900010f1b5f",
               "icon": "Laptop",
               "title": "The whole platform, locally",
               "description": "One Docker Compose command runs every site, sign-in, monitoring and logs on my laptop, built the same way as production, so changes are checked end to end before they ship.",
@@ -693,11 +693,11 @@
           ],
           "toolGroups": [
             {
-              "id": "6b0a0af96fc5e3000125b244",
+              "id": "6b0a1d3e2374b900010f1b6a",
               "group": "Apps",
               "tools": [
                 {
-                  "id": "6b0a0af96fc5e3000125b23a",
+                  "id": "6b0a1d3e2374b900010f1b60",
                   "name": "Next.js",
                   "url": "https://nextjs.org",
                   "logo": "nextdotjs",
@@ -705,7 +705,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b23b",
+                  "id": "6b0a1d3e2374b900010f1b61",
                   "name": "React",
                   "url": "https://react.dev",
                   "logo": "react",
@@ -713,7 +713,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b23c",
+                  "id": "6b0a1d3e2374b900010f1b62",
                   "name": "TypeScript",
                   "url": "https://www.typescriptlang.org",
                   "logo": "typescript",
@@ -721,7 +721,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b23d",
+                  "id": "6b0a1d3e2374b900010f1b63",
                   "name": "Tailwind CSS",
                   "url": "https://tailwindcss.com",
                   "logo": "tailwindcss",
@@ -729,7 +729,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b23e",
+                  "id": "6b0a1d3e2374b900010f1b64",
                   "name": "Node.js",
                   "url": "https://nodejs.org",
                   "logo": "nodedotjs",
@@ -737,7 +737,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b23f",
+                  "id": "6b0a1d3e2374b900010f1b65",
                   "name": ".NET",
                   "url": "https://dotnet.microsoft.com",
                   "logo": "dotnet",
@@ -745,7 +745,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b240",
+                  "id": "6b0a1d3e2374b900010f1b66",
                   "name": "PostgreSQL",
                   "url": "https://www.postgresql.org",
                   "logo": "postgresql",
@@ -753,7 +753,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b241",
+                  "id": "6b0a1d3e2374b900010f1b67",
                   "name": "Storybook",
                   "url": "https://storybook.js.org",
                   "logo": "storybook",
@@ -761,7 +761,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b242",
+                  "id": "6b0a1d3e2374b900010f1b68",
                   "name": "Vitest",
                   "url": "https://vitest.dev",
                   "logo": "vitest",
@@ -769,7 +769,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b243",
+                  "id": "6b0a1d3e2374b900010f1b69",
                   "name": "Payload",
                   "url": "https://payloadcms.com",
                   "logo": "payloadcms",
@@ -779,11 +779,11 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b24f",
+              "id": "6b0a1d3e2374b900010f1b75",
               "group": "Hosting and delivery",
               "tools": [
                 {
-                  "id": "6b0a0af96fc5e3000125b245",
+                  "id": "6b0a1d3e2374b900010f1b6b",
                   "name": "IONOS",
                   "url": "https://www.ionos.com",
                   "logo": "ionos",
@@ -791,7 +791,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b246",
+                  "id": "6b0a1d3e2374b900010f1b6c",
                   "name": "Coolify",
                   "url": "https://coolify.io",
                   "logo": "coolify",
@@ -799,7 +799,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b247",
+                  "id": "6b0a1d3e2374b900010f1b6d",
                   "name": "Docker",
                   "url": "https://www.docker.com",
                   "logo": "docker",
@@ -807,7 +807,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b248",
+                  "id": "6b0a1d3e2374b900010f1b6e",
                   "name": "Traefik",
                   "url": "https://traefik.io",
                   "logo": "traefikproxy",
@@ -815,7 +815,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b249",
+                  "id": "6b0a1d3e2374b900010f1b6f",
                   "name": "Cloudflare",
                   "url": "https://www.cloudflare.com",
                   "logo": "cloudflare",
@@ -823,7 +823,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b24a",
+                  "id": "6b0a1d3e2374b900010f1b70",
                   "name": "Let's Encrypt",
                   "url": "https://letsencrypt.org",
                   "logo": "letsencrypt",
@@ -831,7 +831,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b24b",
+                  "id": "6b0a1d3e2374b900010f1b71",
                   "name": "GitHub",
                   "url": "https://github.com",
                   "logo": "github",
@@ -839,7 +839,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b24c",
+                  "id": "6b0a1d3e2374b900010f1b72",
                   "name": "GitHub Actions",
                   "url": "https://github.com/features/actions",
                   "logo": "githubactions",
@@ -847,7 +847,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b24d",
+                  "id": "6b0a1d3e2374b900010f1b73",
                   "name": "Dependabot",
                   "url": "https://github.com/dependabot",
                   "logo": "dependabot",
@@ -855,7 +855,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b24e",
+                  "id": "6b0a1d3e2374b900010f1b74",
                   "name": "Caddy",
                   "url": "https://caddyserver.com",
                   "logo": "caddy",
@@ -865,11 +865,11 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b256",
+              "id": "6b0a1d3e2374b900010f1b7c",
               "group": "Sign-in, monitoring and email",
               "tools": [
                 {
-                  "id": "6b0a0af96fc5e3000125b250",
+                  "id": "6b0a1d3e2374b900010f1b76",
                   "name": "authentik",
                   "url": "https://goauthentik.io",
                   "logo": "authentik",
@@ -877,7 +877,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b251",
+                  "id": "6b0a1d3e2374b900010f1b77",
                   "name": "Prometheus",
                   "url": "https://prometheus.io",
                   "logo": "prometheus",
@@ -885,7 +885,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b252",
+                  "id": "6b0a1d3e2374b900010f1b78",
                   "name": "Grafana",
                   "url": "https://grafana.com",
                   "logo": "grafana",
@@ -893,7 +893,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b253",
+                  "id": "6b0a1d3e2374b900010f1b79",
                   "name": "Loki",
                   "url": "https://grafana.com/oss/loki/",
                   "logo": null,
@@ -901,7 +901,7 @@
                   "icon": "ScrollText"
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b254",
+                  "id": "6b0a1d3e2374b900010f1b7a",
                   "name": "Alloy",
                   "url": "https://grafana.com/oss/alloy/",
                   "logo": null,
@@ -909,7 +909,7 @@
                   "icon": "Workflow"
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b255",
+                  "id": "6b0a1d3e2374b900010f1b7b",
                   "name": "SMTP2GO",
                   "url": "https://www.smtp2go.com",
                   "logo": null,
@@ -919,11 +919,11 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b259",
+              "id": "6b0a1d3e2374b900010f1b7f",
               "group": "Built with",
               "tools": [
                 {
-                  "id": "6b0a0af96fc5e3000125b257",
+                  "id": "6b0a1d3e2374b900010f1b7d",
                   "name": "Claude Code",
                   "url": "https://claude.com/claude-code",
                   "logo": "claude",
@@ -931,7 +931,7 @@
                   "icon": null
                 },
                 {
-                  "id": "6b0a0af96fc5e3000125b258",
+                  "id": "6b0a1d3e2374b900010f1b7e",
                   "name": "GitHub Desktop",
                   "url": "https://desktop.github.com",
                   "logo": "github",
@@ -965,7 +965,7 @@
         "title": "How the platform works",
         "description": "The self-hosted platform behind every project: one VPS, Coolify, approval-gated CI/CD, single sign-on, a CMS, monitoring, logs and email, all set up as code."
       },
-      "updatedAt": "2026-11-27T22:58:01.449Z",
+      "updatedAt": "2026-11-28T01:42:47.935Z",
       "createdAt": "2026-11-27T22:57:59.146Z",
       "_status": "published"
     },
@@ -975,7 +975,7 @@
       "title": "Every page, edited in a CMS",
       "layout": [
         {
-          "id": "6b0a0afa6fc5e3000125b26e",
+          "id": "6b0a1d412374b900010f1b94",
           "eyebrow": "Payload CMS",
           "heading": null,
           "intro": "Every word on this site and the User Directory comes from my own Payload CMS. Pages are built from blocks, previewed live beside the editor, and published without a deploy. Ask for access and you can look round it yourself, read-only.",
@@ -984,7 +984,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afa6fc5e3000125b26c",
+              "id": "6b0a1d412374b900010f1b92",
               "label": "Request access",
               "style": "primary",
               "size": "default",
@@ -1003,7 +1003,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b26d",
+              "id": "6b0a1d412374b900010f1b93",
               "label": "The CMS on GitHub",
               "style": "secondary",
               "size": "default",
@@ -1025,7 +1025,7 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b26f",
+          "id": "6b0a1d412374b900010f1b95",
           "image": 1,
           "imageSide": "right",
           "eyebrow": "Start from the page",
@@ -1087,7 +1087,7 @@
           "blockType": "imageText"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b270",
+          "id": "6b0a1d412374b900010f1b96",
           "image": 2,
           "imageSide": "left",
           "eyebrow": "Live Preview",
@@ -1149,14 +1149,14 @@
           "blockType": "imageText"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b274",
+          "id": "6b0a1d412374b900010f1b9a",
           "title": "Built from blocks",
           "intro": "A page is a list of blocks, top to bottom. Each block is a component the site already knows how to draw, so a new page needs no code.",
           "anchor": "blocks",
           "blockName": null,
           "columns": [
             {
-              "id": "6b0a0afa6fc5e3000125b271",
+              "id": "6b0a1d412374b900010f1b97",
               "heading": "General blocks",
               "body": {
                 "root": {
@@ -1191,7 +1191,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b272",
+              "id": "6b0a1d412374b900010f1b98",
               "heading": "Site sections",
               "body": {
                 "root": {
@@ -1226,7 +1226,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b273",
+              "id": "6b0a1d412374b900010f1b99",
               "heading": "New components",
               "body": {
                 "root": {
@@ -1264,7 +1264,7 @@
           "blockType": "columns"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b277",
+          "id": "6b0a1d412374b900010f1b9d",
           "eyebrow": "Look round it yourself",
           "heading": "Read-only access, on request",
           "body": {
@@ -1434,7 +1434,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afa6fc5e3000125b275",
+              "id": "6b0a1d412374b900010f1b9b",
               "label": "Request access",
               "style": "primary",
               "size": "default",
@@ -1453,7 +1453,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b276",
+              "id": "6b0a1d412374b900010f1b9c",
               "label": "How sign-in works",
               "style": "secondary",
               "size": "default",
@@ -1475,7 +1475,7 @@
           "blockType": "content"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b278",
+          "id": "6b0a1d412374b900010f1b9e",
           "image": 3,
           "caption": "A site's settings: its details, header links, footer, and the words every page shares.",
           "size": "column",
@@ -1510,7 +1510,7 @@
         "title": "The CMS",
         "description": "How the sites' content lives in a self-hosted Payload CMS: pages built from blocks, Live Preview, drafts and read-only access on request."
       },
-      "updatedAt": "2026-11-27T22:58:02.954Z",
+      "updatedAt": "2026-11-28T01:42:50.208Z",
       "createdAt": "2026-11-27T22:57:59.481Z",
       "_status": "published"
     },
@@ -1520,7 +1520,7 @@
       "title": "Email that actually arrives",
       "layout": [
         {
-          "id": "6b0a0afb6fc5e3000125b292",
+          "id": "6b0a1d422374b900010f1bb8",
           "eyebrow": "Email delivery",
           "heading": null,
           "intro": "Two parts of the platform send email: authentik, for access requests and approvals, and Grafana, for alerts. Both go through SMTP2GO from noreply@thebensage.com, on a domain verified with DNS records, so the messages land in the inbox rather than spam.",
@@ -1529,7 +1529,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afb6fc5e3000125b291",
+              "id": "6b0a1d422374b900010f1bb7",
               "label": "The email templates on GitHub",
               "style": "secondary",
               "size": "default",
@@ -1551,35 +1551,35 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b29c",
+          "id": "6b0a1d422374b900010f1bc2",
           "anchor": "flow",
           "title": "How a message travels",
           "blockName": null,
           "rows": [
             {
-              "id": "6b0a0afb6fc5e3000125b297",
+              "id": "6b0a1d422374b900010f1bbd",
               "label": "Sending",
               "steps": [
                 {
-                  "id": "6b0a0afb6fc5e3000125b293",
+                  "id": "6b0a1d422374b900010f1bb9",
                   "icon": "Server",
                   "title": "authentik or Grafana",
                   "detail": "In Docker on the VPS"
                 },
                 {
-                  "id": "6b0a0afb6fc5e3000125b294",
+                  "id": "6b0a1d422374b900010f1bba",
                   "icon": "LockKeyhole",
                   "title": "SMTP over STARTTLS",
                   "detail": "Port 587, signed in"
                 },
                 {
-                  "id": "6b0a0afb6fc5e3000125b295",
+                  "id": "6b0a1d422374b900010f1bbb",
                   "icon": "Send",
                   "title": "SMTP2GO",
                   "detail": "Signs and delivers"
                 },
                 {
-                  "id": "6b0a0afb6fc5e3000125b296",
+                  "id": "6b0a1d422374b900010f1bbc",
                   "icon": "Inbox",
                   "title": "Your inbox",
                   "detail": "From noreply@"
@@ -1587,23 +1587,23 @@
               ]
             },
             {
-              "id": "6b0a0afb6fc5e3000125b29b",
+              "id": "6b0a1d422374b900010f1bc1",
               "label": "Receiving",
               "steps": [
                 {
-                  "id": "6b0a0afb6fc5e3000125b298",
+                  "id": "6b0a1d422374b900010f1bbe",
                   "icon": "Mail",
                   "title": "hello@ or admin@",
                   "detail": "Public addresses"
                 },
                 {
-                  "id": "6b0a0afb6fc5e3000125b299",
+                  "id": "6b0a1d422374b900010f1bbf",
                   "icon": "Globe",
                   "title": "Cloudflare",
                   "detail": "Email Routing"
                 },
                 {
-                  "id": "6b0a0afb6fc5e3000125b29a",
+                  "id": "6b0a1d422374b900010f1bc0",
                   "icon": "Forward",
                   "title": "Forwarded",
                   "detail": "To my own inbox"
@@ -1614,23 +1614,23 @@
           "blockType": "flows"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2a0",
+          "id": "6b0a1d422374b900010f1bc6",
           "anchor": "addresses",
           "title": "Three addresses, three jobs",
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0afb6fc5e3000125b29d",
+              "id": "6b0a1d422374b900010f1bc3",
               "address": "noreply@thebensage.com",
               "job": "The sender of every automatic email. Nobody reads it, so replies aren't invited."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b29e",
+              "id": "6b0a1d422374b900010f1bc4",
               "address": "hello@thebensage.com",
               "job": "The public contact address on every site, the privacy notice and the terms."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b29f",
+              "id": "6b0a1d422374b900010f1bc5",
               "address": "admin@thebensage.com",
               "job": "Where access requests and alerts go, so personal mail stays separate."
             }
@@ -1638,13 +1638,13 @@
           "blockType": "addressCards"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2a3",
+          "id": "6b0a1d422374b900010f1bc9",
           "anchor": "senders",
           "title": "What gets sent",
           "blockName": null,
           "senders": [
             {
-              "id": "6b0a0afb6fc5e3000125b2a1",
+              "id": "6b0a1d422374b900010f1bc7",
               "icon": "Users",
               "title": "Sign-in emails",
               "description": "Sent by authentik during the request-access flow.",
@@ -1655,7 +1655,7 @@
               ]
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2a2",
+              "id": "6b0a1d422374b900010f1bc8",
               "icon": "BellRing",
               "title": "Alerts",
               "description": "Sent by Grafana when a rule fires, and again when it resolves.",
@@ -1684,7 +1684,7 @@
           }
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2a8",
+          "id": "6b0a1d422374b900010f1bce",
           "anchor": "practices",
           "title": "Done properly",
           "intro": null,
@@ -1693,28 +1693,28 @@
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0afb6fc5e3000125b2a4",
+              "id": "6b0a1d422374b900010f1bca",
               "icon": "ShieldCheck",
               "title": "A verified domain",
               "description": "thebensage.com is a verified sender domain in SMTP2GO, with its DKIM and return-path records in Cloudflare, so receiving servers can check every message really comes from the domain.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2a5",
+              "id": "6b0a1d422374b900010f1bcb",
               "icon": "Activity",
               "title": "No click tracking",
               "description": "Link tracking is switched off, so every button in an email goes straight to the site it names, not through a redirect on someone else's domain.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2a6",
+              "id": "6b0a1d422374b900010f1bcc",
               "icon": "Code",
               "title": "Settings, not code",
               "description": "The SMTP server, port, TLS, login, sender and recipients are seven explicit settings in GitHub, passed in by the deploy pipeline. The password is a secret only an approved deploy can read. A new provider is new values, not a code change.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2a7",
+              "id": "6b0a1d422374b900010f1bcd",
               "icon": "Laptop",
               "title": "Tested before it ships",
               "description": "The local Docker stack sends the same emails through the same provider, so a change to a template or a setting is checked end to end before production.",
@@ -1751,7 +1751,7 @@
         "title": "Email",
         "description": "How the platform sends and receives email: SMTP2GO on a verified domain for access requests, approvals and alerts, and Cloudflare forwarding for the public addresses."
       },
-      "updatedAt": "2026-11-27T22:58:03.430Z",
+      "updatedAt": "2026-11-28T01:42:50.415Z",
       "createdAt": "2026-11-27T22:57:59.792Z",
       "_status": "published"
     },
@@ -1761,7 +1761,7 @@
       "title": "From idea to production",
       "layout": [
         {
-          "id": "6b0a0afb6fc5e3000125b2aa",
+          "id": "6b0a1d432374b900010f1bd0",
           "eyebrow": "Engineering workflow",
           "heading": null,
           "intro": "I design, build and run this platform myself. AI-assisted tooling speeds up the routine parts, the way linters and CI do, but the architecture, the decisions, the reviews and every deploy are mine.",
@@ -1770,7 +1770,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afb6fc5e3000125b2a9",
+              "id": "6b0a1d432374b900010f1bcf",
               "label": "The AI tooling I use: Claude Code",
               "style": "ghost",
               "size": "sm",
@@ -1792,7 +1792,7 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2b0",
+          "id": "6b0a1d432374b900010f1bd6",
           "anchor": "workflow",
           "title": "How a change gets made",
           "intro": null,
@@ -1801,35 +1801,35 @@
           "blockName": null,
           "steps": [
             {
-              "id": "6b0a0afb6fc5e3000125b2ab",
+              "id": "6b0a1d432374b900010f1bd1",
               "icon": "ListChecks",
               "actor": "Me",
               "title": "Define the outcome",
               "description": "I start from what a change should achieve, like “show the sign-up flow on the portfolio”, and split it into separate pieces of work so unrelated jobs don't tangle."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2ac",
+              "id": "6b0a1d432374b900010f1bd2",
               "icon": "Split",
               "actor": "Me",
               "title": "Build it",
               "description": "I write and refine the code to the rules each repo sets out, using AI-assisted tooling for routine work such as boilerplate and first drafts."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2ad",
+              "id": "6b0a1d432374b900010f1bd3",
               "icon": "UserRoundCheck",
               "actor": "Me",
               "title": "Make the calls",
               "description": "When a choice changes the result, like the shape of this site, I weigh a short set of options and pick one. Design decisions don't get made by default."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2ae",
+              "id": "6b0a1d432374b900010f1bd4",
               "icon": "ShieldCheck",
               "actor": "Checks",
               "title": "Prove it works",
               "description": "Format, lint and type checks, real production builds, workflow linting, screenshots at phone and desktop widths, and the whole platform run locally in Docker. “It parses” doesn't count as done."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2af",
+              "id": "6b0a1d432374b900010f1bd5",
               "icon": "GitPullRequest",
               "actor": "Me",
               "title": "Review, commit and approve",
@@ -1851,7 +1851,7 @@
           "tags": []
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2b7",
+          "id": "6b0a1d432374b900010f1bdd",
           "anchor": "practices",
           "title": "What makes it work",
           "intro": null,
@@ -1860,42 +1860,42 @@
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0afb6fc5e3000125b2b1",
+              "id": "6b0a1d432374b900010f1bd7",
               "icon": "ScrollText",
               "title": "House rules in every repo",
               "description": "Each repo documents its version pins and why, where content lives, the styling rules, how CI and deploys work, and hard lines such as never printing a token, so every change starts from the same rules.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2b2",
+              "id": "6b0a1d432374b900010f1bd8",
               "icon": "Eye",
               "title": "Checked against the source",
               "description": "Instructions are checked against the current docs at the exact version I run (Coolify's, for example), and files are re-read rather than trusting old notes.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2b3",
+              "id": "6b0a1d432374b900010f1bd9",
               "icon": "LockKeyhole",
               "title": "Secrets stay with me",
               "description": "Tokens and passwords are typed by me into GitHub or a local file that never gets printed. Production secrets sit behind an approval-gated environment, so nothing deploys without me.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2b4",
+              "id": "6b0a1d432374b900010f1bda",
               "icon": "Wrench",
               "title": "Tested where it runs",
               "description": "The whole platform runs locally in Docker on my laptop, and pages are checked in a real browser at phone and desktop widths before anything goes live.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2b5",
+              "id": "6b0a1d432374b900010f1bdb",
               "icon": "FileCode",
               "title": "Guides you can follow",
               "description": "Anything done by hand, like going live or switching email provider, gets a step-by-step guide: one step at a time, exact values, nothing assumed.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b2b6",
+              "id": "6b0a1d432374b900010f1bdc",
               "icon": "Code",
               "title": "Decisions written down",
               "description": "Lasting decisions (the GitHub organisation, the email addresses, the deploy rules) are recorded, so later work picks up from what's already settled.",
@@ -1932,7 +1932,7 @@
         "title": "How I work",
         "description": "How I take a change from idea to production: clear outcomes, written house rules in every repo, real verification before anything ships, and every review, commit and deploy approved by me."
       },
-      "updatedAt": "2026-11-27T22:58:03.668Z",
+      "updatedAt": "2026-11-28T01:42:50.635Z",
       "createdAt": "2026-11-27T22:57:59.947Z",
       "_status": "published"
     },
@@ -1942,7 +1942,7 @@
       "title": "One account for every app",
       "layout": [
         {
-          "id": "6b0a0afb6fc5e3000125b27b",
+          "id": "6b0a1d422374b900010f1ba1",
           "eyebrow": "Single sign-on",
           "heading": null,
           "intro": "Every site here signs in through my own authentik instance over OpenID Connect. Sign in once and you're signed in everywhere; sign out once and you're signed out everywhere. Getting access is one page, and I approve it app by app.",
@@ -1951,7 +1951,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afb6fc5e3000125b279",
+              "id": "6b0a1d422374b900010f1b9f",
               "label": "Request access",
               "style": "primary",
               "size": "default",
@@ -1970,7 +1970,7 @@
               }
             },
             {
-              "id": "6b0a0afb6fc5e3000125b27a",
+              "id": "6b0a1d422374b900010f1ba0",
               "label": "The blueprint on GitHub",
               "style": "secondary",
               "size": "default",
@@ -1992,7 +1992,7 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b27f",
+          "id": "6b0a1d422374b900010f1ba5",
           "anchor": "sso",
           "title": "Sign in once, use every app",
           "intro": null,
@@ -2001,21 +2001,21 @@
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0afb6fc5e3000125b27c",
+              "id": "6b0a1d422374b900010f1ba2",
               "icon": "KeyRound",
               "title": "Single sign-on",
               "description": "When you open a site signed out, it quietly asks authentik whether you're already signed in (prompt=none). If you are, you're in without seeing a form; if not, you stay on the page as a visitor, with no error. Crawlers and uptime checks skip the check.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b27d",
+              "id": "6b0a1d422374b900010f1ba3",
               "icon": "LogOut",
               "title": "Single sign-out",
               "description": "Sign out anywhere and authentik ends its session, then loads each app's front-channel logout page in a hidden frame, so every site drops its own session too.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b27e",
+              "id": "6b0a1d422374b900010f1ba4",
               "icon": "FingerprintPattern",
               "title": "Passkeys and two-factor",
               "description": "Sign in with a password or a passkey offered straight away by the browser, and add an authenticator app for two-factor. The sign-in pages carry the same brand as the sites.",
@@ -2025,7 +2025,7 @@
           "blockType": "cardGrid"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b285",
+          "id": "6b0a1d422374b900010f1bab",
           "anchor": "flow",
           "title": "How getting access works",
           "intro": "One request-access page serves every app. Each app links to it with its own box already ticked, and the account works straight away, but it unlocks nothing until I approve an app.",
@@ -2034,35 +2034,35 @@
           "blockName": null,
           "steps": [
             {
-              "id": "6b0a0afb6fc5e3000125b280",
+              "id": "6b0a1d422374b900010f1ba6",
               "icon": "UserPlus",
               "actor": "You",
               "title": "Create an account",
               "description": "Name, email, username and password. A second account with the same email or username is refused on the form. Already signed in? This step is skipped."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b281",
+              "id": "6b0a1d422374b900010f1ba7",
               "icon": "ListChecks",
               "actor": "You",
               "title": "Pick the apps",
               "description": "Tick what you'd like, with an optional reason. authentik keeps the picks on your account and sends you back to the app you came from, signed in."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b282",
+              "id": "6b0a1d422374b900010f1ba8",
               "icon": "Send",
               "actor": "authentik",
               "title": "Emails go out",
               "description": "You get a “We've got your request” email, and I get a “New access request” email at admin@ with your picks, your reason and a button to review it in authentik."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b283",
+              "id": "6b0a1d422374b900010f1ba9",
               "icon": "UserCheck",
               "actor": "Me",
               "title": "Approve, app by app",
               "description": "Approving is adding you to that app's group. No form to fill in and nothing to remember: the group is the permission."
             },
             {
-              "id": "6b0a0afb6fc5e3000125b284",
+              "id": "6b0a1d422374b900010f1baa",
               "icon": "MailCheck",
               "actor": "authentik",
               "title": "“You're in”",
@@ -2084,38 +2084,38 @@
           "tags": []
         },
         {
-          "id": "6b0a0afb6fc5e3000125b28b",
+          "id": "6b0a1d422374b900010f1bb1",
           "anchor": "access",
           "title": "Who can do what",
           "intro": "Anyone with an account can sign in to every public app. What you can do there comes from the groups in your sign-in token, which each app checks itself.",
           "blockName": null,
           "rows": [
             {
-              "id": "6b0a0afb6fc5e3000125b286",
+              "id": "6b0a1d422374b900010f1bac",
               "app": "Portfolio",
               "group": "portfolio-members",
               "unlocks": "The colour palette on this site"
             },
             {
-              "id": "6b0a0afb6fc5e3000125b287",
+              "id": "6b0a1d422374b900010f1bad",
               "app": "User Directory",
               "group": "user-directory-editors",
               "unlocks": "Adding, editing and deleting users"
             },
             {
-              "id": "6b0a0afb6fc5e3000125b288",
+              "id": "6b0a1d422374b900010f1bae",
               "app": "API",
               "group": "api-editors",
               "unlocks": "Sending real requests from the API docs"
             },
             {
-              "id": "6b0a0afb6fc5e3000125b289",
+              "id": "6b0a1d422374b900010f1baf",
               "app": "Grafana",
               "group": "grafana-viewers, grafana-admins",
               "unlocks": "Dashboards and logs (I add these by hand; they can't be requested)"
             },
             {
-              "id": "6b0a0afb6fc5e3000125b28a",
+              "id": "6b0a1d422374b900010f1bb0",
               "app": "CMS",
               "group": "cms-editors, cms-viewers",
               "unlocks": "Editing the sites' content, or looking round it (by hand too)"
@@ -2129,7 +2129,7 @@
           }
         },
         {
-          "id": "6b0a0afb6fc5e3000125b290",
+          "id": "6b0a1d422374b900010f1bb6",
           "anchor": "details",
           "title": "The details that matter",
           "intro": null,
@@ -2138,28 +2138,28 @@
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0afb6fc5e3000125b28c",
+              "id": "6b0a1d422374b900010f1bb2",
               "icon": "FileCode",
               "title": "Everything as code",
               "description": "Groups, apps, sign-in pages, emails and the approval rule live in one versioned blueprint that authentik re-applies on start and hourly, so a change in the UI can't drift.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b28d",
+              "id": "6b0a1d422374b900010f1bb3",
               "icon": "LockKeyhole",
               "title": "Least privilege",
               "description": "People who sign up are external users: they reach the apps they're allowed into and never authentik's own admin pages. Writes to the API need an editor group, checked by the API itself.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b28e",
+              "id": "6b0a1d422374b900010f1bb4",
               "icon": "Ticket",
               "title": "Guest invites",
               "description": "For a short-term guest I create a single-use invite link with an expiry. They pick their own password, can edit the User Directory and nothing else, and I deactivate them afterwards.",
               "tags": []
             },
             {
-              "id": "6b0a0afb6fc5e3000125b28f",
+              "id": "6b0a1d422374b900010f1bb5",
               "icon": "ShieldCheck",
               "title": "Privacy built in",
               "description": "The sign-up form says what's stored and links the privacy notice. Accounts are deleted when a request is refused or access ends.",
@@ -2196,7 +2196,7 @@
         "title": "Sign-in and access",
         "description": "How sign-in works across the sites: single sign-on and single sign-out through my own authentik, a request-access page approved app by app, and an email at every step."
       },
-      "updatedAt": "2026-11-27T22:58:03.206Z",
+      "updatedAt": "2026-11-28T01:42:50.841Z",
       "createdAt": "2026-11-27T22:57:59.638Z",
       "_status": "published"
     },
@@ -2206,16 +2206,16 @@
       "title": "Privacy notice",
       "layout": [
         {
-          "id": "6b0a0afb6fc5e3000125b2c0",
+          "id": "6b0a1d442374b900010f1be6",
           "updatedLabel": "Last updated",
-          "updated": "2026-11-27T12:00:00.000Z",
+          "updated": "2026-11-28T12:00:00.000Z",
           "heading": null,
           "intro": "This notice applies to all sites operated by TheBensage: this site, the User Directory, TheBensage API, the component library (Storybook), the sign-in service and the monitoring dashboards. They are a personal portfolio operated by an individual in the UK, who is the controller of the personal data described below. Contact: hello@thebensage.com.",
           "blockName": null,
           "blockType": "legalHeader"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2c1",
+          "id": "6b0a1d442374b900010f1be7",
           "heading": "Data collected",
           "anchor": null,
           "body": {
@@ -2433,7 +2433,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2c2",
+          "id": "6b0a1d442374b900010f1be8",
           "heading": "Cookies",
           "anchor": "cookies",
           "body": {
@@ -2543,7 +2543,7 @@
                         },
                         {
                           "mode": "normal",
-                          "text": ", which remembers for a few minutes that you aren't signed in), this site (",
+                          "text": ", which remembers for a few minutes that you aren't signed in) and this site (",
                           "type": "text",
                           "style": "",
                           "detail": 0,
@@ -2597,7 +2597,25 @@
                         },
                         {
                           "mode": "normal",
-                          "text": ", the same jobs for the main site's sign-in, plus ",
+                          "text": ", the same jobs for the main site's sign-in), plus ",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        },
+                        {
+                          "mode": "normal",
+                          "text": "ud_returning",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 16,
+                          "version": 1
+                        },
+                        {
+                          "mode": "normal",
+                          "text": " and ",
                           "type": "text",
                           "style": "",
                           "detail": 0,
@@ -2615,7 +2633,7 @@
                         },
                         {
                           "mode": "normal",
-                          "text": ", kept for one year after you sign in so the site only checks for an existing sign-in in browsers that have used it), the CMS (",
+                          "text": ", kept for one year after you sign in so each site only checks for an existing sign-in in browsers that have used it; the CMS (",
                           "type": "text",
                           "style": "",
                           "detail": 0,
@@ -2857,7 +2875,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2c3",
+          "id": "6b0a1d442374b900010f1be9",
           "heading": "Service providers",
           "anchor": null,
           "body": {
@@ -3019,7 +3037,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2c4",
+          "id": "6b0a1d442374b900010f1bea",
           "heading": "Your rights",
           "anchor": null,
           "body": {
@@ -3109,7 +3127,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afb6fc5e3000125b2c5",
+          "id": "6b0a1d442374b900010f1beb",
           "heading": "Changes",
           "anchor": null,
           "body": {
@@ -3168,7 +3186,7 @@
         "title": "Privacy notice",
         "description": "How TheBensage's sites collect and use personal data, and your rights."
       },
-      "updatedAt": "2026-11-27T22:58:04.013Z",
+      "updatedAt": "2026-11-28T01:44:54.221Z",
       "createdAt": "2026-11-27T22:58:00.186Z",
       "_status": "published"
     },
@@ -3178,7 +3196,7 @@
       "title": "Projects",
       "layout": [
         {
-          "id": "6b0a0afa6fc5e3000125b25b",
+          "id": "6b0a1d402374b900010f1b81",
           "eyebrow": "Projects",
           "heading": null,
           "intro": "Each project is live and open source. The cards open each one's page here, or the app itself, with its source code a click away.",
@@ -3189,7 +3207,7 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b260",
+          "id": "6b0a1d402374b900010f1b86",
           "anchor": "projects",
           "eyebrow": null,
           "title": "Live projects",
@@ -3199,22 +3217,22 @@
             "title": "Coming next",
             "items": [
               {
-                "id": "6b0a0afa6fc5e3000125b25c",
+                "id": "6b0a1d402374b900010f1b82",
                 "name": "Hangfire",
                 "detail": "Background jobs and scheduled work"
               },
               {
-                "id": "6b0a0afa6fc5e3000125b25d",
+                "id": "6b0a1d402374b900010f1b83",
                 "name": "Email templates",
                 "detail": "Designed in-house, not just authentik's"
               },
               {
-                "id": "6b0a0afa6fc5e3000125b25e",
+                "id": "6b0a1d402374b900010f1b84",
                 "name": "RabbitMQ",
                 "detail": "Messaging between the API and the apps"
               },
               {
-                "id": "6b0a0afa6fc5e3000125b25f",
+                "id": "6b0a1d402374b900010f1b85",
                 "name": "Stripe",
                 "detail": "Payments"
               }
@@ -3250,7 +3268,7 @@
         "title": null,
         "description": "Live projects by TheBensage: a user directory, the API behind it, a shared design system and a self-hosted CMS, all open source."
       },
-      "updatedAt": "2026-11-27T22:58:02.531Z",
+      "updatedAt": "2026-11-28T01:42:49.149Z",
       "createdAt": "2026-11-27T22:57:59.254Z",
       "_status": "published"
     },
@@ -3260,7 +3278,7 @@
       "title": "One design system for every site",
       "layout": [
         {
-          "id": "6b0a0afa6fc5e3000125b263",
+          "id": "6b0a1d412374b900010f1b89",
           "eyebrow": "Shared UI",
           "heading": null,
           "intro": "Every site here is built from one library: React components, Tailwind styles and a colour palette defined once, by role. It's published as a package, documented in Storybook, and the sign-in pages and emails use the same palette.",
@@ -3269,7 +3287,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afa6fc5e3000125b261",
+              "id": "6b0a1d412374b900010f1b87",
               "label": "Browse the components",
               "style": "primary",
               "size": "default",
@@ -3288,7 +3306,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b262",
+              "id": "6b0a1d412374b900010f1b88",
               "label": "Shared UI on GitHub",
               "style": "secondary",
               "size": "default",
@@ -3310,7 +3328,7 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b264",
+          "id": "6b0a1d412374b900010f1b8a",
           "image": 4,
           "imageSide": "right",
           "eyebrow": "Storybook",
@@ -3372,14 +3390,14 @@
           "blockType": "imageText"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b268",
+          "id": "6b0a1d412374b900010f1b8e",
           "title": "What's inside",
           "intro": "The parts every site shares, so they look and behave the same.",
           "anchor": "inside",
           "blockName": null,
           "columns": [
             {
-              "id": "6b0a0afa6fc5e3000125b265",
+              "id": "6b0a1d412374b900010f1b8b",
               "heading": "Components",
               "body": {
                 "root": {
@@ -3414,7 +3432,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b266",
+              "id": "6b0a1d412374b900010f1b8c",
               "heading": "Styles and tokens",
               "body": {
                 "root": {
@@ -3449,7 +3467,7 @@
               }
             },
             {
-              "id": "6b0a0afa6fc5e3000125b267",
+              "id": "6b0a1d412374b900010f1b8d",
               "heading": "Content-ready",
               "body": {
                 "root": {
@@ -3487,7 +3505,7 @@
           "blockType": "columns"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b26a",
+          "id": "6b0a1d412374b900010f1b90",
           "image": 5,
           "imageSide": "left",
           "eyebrow": "The palette",
@@ -3547,7 +3565,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0afa6fc5e3000125b269",
+              "id": "6b0a1d412374b900010f1b8f",
               "label": "Try changing the colours",
               "style": "secondary",
               "size": "default",
@@ -3569,7 +3587,7 @@
           "blockType": "imageText"
         },
         {
-          "id": "6b0a0afa6fc5e3000125b26b",
+          "id": "6b0a1d412374b900010f1b91",
           "eyebrow": "Releases",
           "heading": "Released like any other package",
           "body": {
@@ -3630,7 +3648,7 @@
         "title": "Shared UI",
         "description": "The design system behind the sites: React components, Tailwind styles and one role-based colour palette, published as a package and documented in Storybook."
       },
-      "updatedAt": "2026-11-27T22:58:02.678Z",
+      "updatedAt": "2026-11-28T01:42:49.301Z",
       "createdAt": "2026-11-27T22:57:59.361Z",
       "_status": "published"
     },
@@ -3640,7 +3658,7 @@
       "title": "From discovery to delivery",
       "layout": [
         {
-          "id": "6b0a0af96fc5e3000125b20c",
+          "id": "6b0a1d3e2374b900010f1b32",
           "eyebrow": "Beyond the code",
           "heading": null,
           "intro": "I've worked in Agile teams for over five years, in Scrum, as a full stack developer. Alongside building features, I've been part of projects from discovery through to delivery, worked closely with design and QA, and reviewed code and mentored junior developers.",
@@ -3649,7 +3667,7 @@
           "blockName": null,
           "actions": [
             {
-              "id": "6b0a0af96fc5e3000125b20a",
+              "id": "6b0a1d3e2374b900010f1b30",
               "label": "Get in touch",
               "style": "accent",
               "size": "sm",
@@ -3668,7 +3686,7 @@
               }
             },
             {
-              "id": "6b0a0af96fc5e3000125b20b",
+              "id": "6b0a1d3e2374b900010f1b31",
               "label": "Download CV",
               "style": "secondary",
               "size": "sm",
@@ -3690,7 +3708,7 @@
           "blockType": "pageHeader"
         },
         {
-          "id": "6b0a0af96fc5e3000125b213",
+          "id": "6b0a1d3e2374b900010f1b39",
           "anchor": "skills",
           "title": "What I bring to a team",
           "intro": null,
@@ -3699,7 +3717,7 @@
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0af96fc5e3000125b20d",
+              "id": "6b0a1d3e2374b900010f1b33",
               "icon": "Search",
               "title": "The whole project",
               "description": "I've been part of teams taking client projects from discovery through to delivery, including learning platforms and multi-tenant sites.",
@@ -3709,7 +3727,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b20e",
+              "id": "6b0a1d3e2374b900010f1b34",
               "icon": "PenTool",
               "title": "Working with design and QA",
               "description": "My degree is in Digital Media and Interaction Design, and I work closely with designers and QA, building from Adobe XD and Figma designs, and I've worked on projects that included information architecture reviews and pattern libraries.",
@@ -3720,7 +3738,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b20f",
+              "id": "6b0a1d3e2374b900010f1b35",
               "icon": "Eye",
               "title": "Accessibility and performance",
               "description": "I build accessible, WCAG-compliant interfaces, and I've worked on sites where SEO and performance were part of the build, checked with Lighthouse.",
@@ -3731,7 +3749,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b210",
+              "id": "6b0a1d3e2374b900010f1b36",
               "icon": "FlaskConical",
               "title": "Testing and CI/CD",
               "description": "Testing and CI/CD are part of how I work. I've helped bring out-of-date test suites back to passing, and worked with automated pipelines in Azure DevOps and GitHub Actions.",
@@ -3742,7 +3760,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b211",
+              "id": "6b0a1d3e2374b900010f1b37",
               "icon": "Repeat",
               "title": "Agile delivery",
               "description": "I've worked in Scrum teams for over five years, in small product teams and in larger client programmes, and I've helped teams improve how they plan and track sprints.",
@@ -3753,7 +3771,7 @@
               ]
             },
             {
-              "id": "6b0a0af96fc5e3000125b212",
+              "id": "6b0a1d3e2374b900010f1b38",
               "icon": "MessagesSquare",
               "title": "Code review and mentoring",
               "description": "I review code and have mentored junior developers.",
@@ -3766,7 +3784,7 @@
           "blockType": "cardGrid"
         },
         {
-          "id": "6b0a0af96fc5e3000125b219",
+          "id": "6b0a1d3e2374b900010f1b3f",
           "anchor": "lifecycle",
           "title": "How a project usually runs",
           "intro": "The details change from team to team, but most of my projects have followed these steps.",
@@ -3775,35 +3793,35 @@
           "blockName": null,
           "steps": [
             {
-              "id": "6b0a0af96fc5e3000125b214",
+              "id": "6b0a1d3e2374b900010f1b3a",
               "icon": null,
               "actor": null,
               "title": "Discover",
               "description": "Understand what the client needs before the build starts."
             },
             {
-              "id": "6b0a0af96fc5e3000125b215",
+              "id": "6b0a1d3e2374b900010f1b3b",
               "icon": null,
               "actor": null,
               "title": "Design",
               "description": "Work from the designs in Adobe XD or Figma, alongside the designers and QA."
             },
             {
-              "id": "6b0a0af96fc5e3000125b216",
+              "id": "6b0a1d3e2374b900010f1b3c",
               "icon": null,
               "actor": null,
               "title": "Build",
               "description": "Deliver features in sprints, with code review along the way."
             },
             {
-              "id": "6b0a0af96fc5e3000125b217",
+              "id": "6b0a1d3e2374b900010f1b3d",
               "icon": null,
               "actor": null,
               "title": "Test",
               "description": "Run the tests automatically in the CI/CD pipeline, and audit sites with Lighthouse."
             },
             {
-              "id": "6b0a0af96fc5e3000125b218",
+              "id": "6b0a1d3e2374b900010f1b3e",
               "icon": null,
               "actor": null,
               "title": "Release",
@@ -3825,14 +3843,14 @@
           "tags": []
         },
         {
-          "id": "6b0a0af96fc5e3000125b21d",
+          "id": "6b0a1d3e2374b900010f1b43",
           "anchor": "evidence",
           "title": "See it on this site",
           "intro": "A few places on this site where you can see this way of working:",
           "blockName": null,
           "items": [
             {
-              "id": "6b0a0af96fc5e3000125b21a",
+              "id": "6b0a1d3e2374b900010f1b40",
               "title": "A shared component library",
               "body": "A React component library published as a package and documented in Storybook, used across the apps on this site.",
               "linkLabel": "Browse the components",
@@ -3849,7 +3867,7 @@
               }
             },
             {
-              "id": "6b0a0af96fc5e3000125b21b",
+              "id": "6b0a1d3e2374b900010f1b41",
               "title": "A process, mapped out",
               "body": "The request-access flow laid out step by step, with who does each step and what each group unlocks.",
               "linkLabel": "See the access flow",
@@ -3866,7 +3884,7 @@
               }
             },
             {
-              "id": "6b0a0af96fc5e3000125b21c",
+              "id": "6b0a1d3e2374b900010f1b42",
               "title": "Decisions and guides, written down",
               "body": "How a change gets from an idea to production, and the house rules every repo follows.",
               "linkLabel": "How I work",
@@ -3907,17 +3925,17 @@
         "title": "Skills",
         "description": "How I work in a team: over five years in Agile teams, working with design and QA, testing in CI/CD, code review and mentoring."
       },
-      "updatedAt": "2026-11-27T22:58:01.208Z",
+      "updatedAt": "2026-11-28T01:42:49.461Z",
       "createdAt": "2026-11-27T22:57:59.019Z",
       "_status": "published"
     },
     {
-      "id": 12,
+      "id": 16,
       "site": 1,
       "title": "Terms of use",
       "layout": [
         {
-          "id": "6b0a0afc6fc5e3000125b2c6",
+          "id": "6b0a1d442374b900010f1bec",
           "updatedLabel": "Last updated",
           "updated": "2026-11-25T12:00:00.000Z",
           "heading": null,
@@ -3926,7 +3944,7 @@
           "blockType": "legalHeader"
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2c7",
+          "id": "6b0a1d442374b900010f1bed",
           "heading": "Service",
           "anchor": null,
           "body": {
@@ -3964,7 +3982,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2c8",
+          "id": "6b0a1d442374b900010f1bee",
           "heading": "Accounts and acceptable use",
           "anchor": null,
           "body": {
@@ -4090,7 +4108,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2c9",
+          "id": "6b0a1d442374b900010f1bef",
           "heading": "Liability",
           "anchor": null,
           "body": {
@@ -4128,7 +4146,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2ca",
+          "id": "6b0a1d442374b900010f1bf0",
           "heading": "Intellectual property",
           "anchor": null,
           "body": {
@@ -4166,7 +4184,7 @@
           "blockType": "textSection"
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2cb",
+          "id": "6b0a1d442374b900010f1bf1",
           "heading": "Governing law",
           "anchor": null,
           "body": {
@@ -4214,8 +4232,8 @@
       "inSitemap": true,
       "breadcrumbs": [
         {
-          "id": "6b0a0af86fc5e3000125b1f6",
-          "doc": 12,
+          "id": "6b0a318dc3fcf6000107903b",
+          "doc": 16,
           "url": "/terms",
           "label": "Terms"
         }
@@ -4225,8 +4243,8 @@
         "title": "Terms of use",
         "description": "Terms for using TheBensage's sites."
       },
-      "updatedAt": "2026-11-27T22:58:04.173Z",
-      "createdAt": "2026-11-27T22:58:00.287Z",
+      "updatedAt": "2026-11-28T01:42:49.656Z",
+      "createdAt": "2026-11-28T01:42:37.993Z",
       "_status": "published"
     }
   ],
@@ -4247,7 +4265,7 @@
       "cta": null,
       "source": "https://github.com/thebensage-dev/UserDirectory",
       "page": null,
-      "updatedAt": "2026-11-27T22:58:00.750Z",
+      "updatedAt": "2026-11-28T01:42:47.119Z",
       "createdAt": "2026-11-27T22:58:00.750Z"
     },
     {
@@ -4266,7 +4284,7 @@
       "cta": "Browse the API",
       "source": "https://github.com/thebensage-dev/Api",
       "page": 10,
-      "updatedAt": "2026-11-27T22:58:00.778Z",
+      "updatedAt": "2026-11-28T01:42:47.160Z",
       "createdAt": "2026-11-27T22:58:00.778Z"
     },
     {
@@ -4285,7 +4303,7 @@
       "cta": "See the design system",
       "source": "https://github.com/thebensage-dev/SharedUI",
       "page": 5,
-      "updatedAt": "2026-11-27T22:58:00.825Z",
+      "updatedAt": "2026-11-28T01:42:47.197Z",
       "createdAt": "2026-11-27T22:58:00.825Z"
     },
     {
@@ -4304,7 +4322,7 @@
       "cta": "See how it works",
       "source": "https://github.com/thebensage-dev/Cms",
       "page": 6,
-      "updatedAt": "2026-11-27T22:58:00.873Z",
+      "updatedAt": "2026-11-28T01:42:47.236Z",
       "createdAt": "2026-11-27T22:58:00.873Z"
     }
   ],
@@ -4312,16 +4330,19 @@
     "id": 1,
     "label": "Portfolio",
     "name": "TheBensage",
+    "blockSets": [
+      "portfolio"
+    ],
     "slug": "portfolio",
+    "subdomain": null,
+    "headline": "Web applications, from database to deployment.",
     "role": "Full-stack developer · Next.js · .NET",
     "email": "hello@thebensage.com",
-    "headline": "Web applications, from database to deployment.",
     "githubUrl": "https://github.com/thebensage-dev",
-    "description": null,
     "header": {
       "nav": [
         {
-          "id": "6b0a0afc6fc5e3000125b2e2",
+          "id": "6b0a1d462374b900010f1c08",
           "label": "Projects",
           "icon": "FolderKanban",
           "wideOnly": null,
@@ -4338,7 +4359,7 @@
           }
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2e3",
+          "id": "6b0a1d462374b900010f1c09",
           "label": "Skills",
           "icon": "Compass",
           "wideOnly": null,
@@ -4355,7 +4376,7 @@
           }
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2e4",
+          "id": "6b0a1d462374b900010f1c0a",
           "label": "Platform",
           "icon": "Server",
           "wideOnly": null,
@@ -4372,7 +4393,7 @@
           }
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2e5",
+          "id": "6b0a1d462374b900010f1c0b",
           "label": "Contact",
           "icon": "Mail",
           "wideOnly": null,
@@ -4389,7 +4410,7 @@
           }
         },
         {
-          "id": "6b0a0afc6fc5e3000125b2e6",
+          "id": "6b0a1d462374b900010f1c0c",
           "label": "GitHub",
           "icon": "FolderGit2",
           "wideOnly": null,
@@ -4418,11 +4439,11 @@
       "owner": null,
       "groups": [
         {
-          "id": "6b0a0afc6fc5e3000125b2ec",
+          "id": "6b0a1d462374b900010f1c12",
           "title": "Projects",
           "links": [
             {
-              "id": "6b0a0afc6fc5e3000125b2e7",
+              "id": "6b0a1d462374b900010f1c0d",
               "label": "All projects",
               "icon": null,
               "link": {
@@ -4438,7 +4459,7 @@
               }
             },
             {
-              "id": "6b0a0afc6fc5e3000125b2e8",
+              "id": "6b0a1d462374b900010f1c0e",
               "label": "User Directory",
               "icon": null,
               "link": {
@@ -4454,7 +4475,7 @@
               }
             },
             {
-              "id": "6b0a0afc6fc5e3000125b2e9",
+              "id": "6b0a1d462374b900010f1c0f",
               "label": "API",
               "icon": null,
               "link": {
@@ -4470,7 +4491,7 @@
               }
             },
             {
-              "id": "6b0a0afc6fc5e3000125b2ea",
+              "id": "6b0a1d462374b900010f1c10",
               "label": "Shared UI",
               "icon": null,
               "link": {
@@ -4486,7 +4507,7 @@
               }
             },
             {
-              "id": "6b0a0afc6fc5e3000125b2eb",
+              "id": "6b0a1d462374b900010f1c11",
               "label": "CMS",
               "icon": null,
               "link": {
@@ -4504,11 +4525,11 @@
           ]
         },
         {
-          "id": "6b0a0afd6fc5e3000125b2f1",
+          "id": "6b0a1d462374b900010f1c17",
           "title": "Platform",
           "links": [
             {
-              "id": "6b0a0afc6fc5e3000125b2ed",
+              "id": "6b0a1d462374b900010f1c13",
               "label": "Overview",
               "icon": null,
               "link": {
@@ -4524,7 +4545,7 @@
               }
             },
             {
-              "id": "6b0a0afd6fc5e3000125b2ee",
+              "id": "6b0a1d462374b900010f1c14",
               "label": "Sign-in and access",
               "icon": null,
               "link": {
@@ -4540,7 +4561,7 @@
               }
             },
             {
-              "id": "6b0a0afd6fc5e3000125b2ef",
+              "id": "6b0a1d462374b900010f1c15",
               "label": "Email",
               "icon": null,
               "link": {
@@ -4556,7 +4577,7 @@
               }
             },
             {
-              "id": "6b0a0afd6fc5e3000125b2f0",
+              "id": "6b0a1d462374b900010f1c16",
               "label": "How I work",
               "icon": null,
               "link": {
@@ -4574,11 +4595,11 @@
           ]
         },
         {
-          "id": "6b0a0afd6fc5e3000125b2f4",
+          "id": "6b0a1d462374b900010f1c1a",
           "title": "About",
           "links": [
             {
-              "id": "6b0a0afd6fc5e3000125b2f2",
+              "id": "6b0a1d462374b900010f1c18",
               "label": "Skills",
               "icon": null,
               "link": {
@@ -4594,7 +4615,7 @@
               }
             },
             {
-              "id": "6b0a0afd6fc5e3000125b2f3",
+              "id": "6b0a1d462374b900010f1c19",
               "label": "Download CV",
               "icon": null,
               "link": {
@@ -4612,11 +4633,11 @@
           ]
         },
         {
-          "id": "6b0a0afd6fc5e3000125b2f8",
+          "id": "6b0a1d462374b900010f1c1e",
           "title": "Contact",
           "links": [
             {
-              "id": "6b0a0afd6fc5e3000125b2f5",
+              "id": "6b0a1d462374b900010f1c1b",
               "label": "hello@thebensage.com",
               "icon": "Mail",
               "link": {
@@ -4632,7 +4653,7 @@
               }
             },
             {
-              "id": "6b0a0afd6fc5e3000125b2f6",
+              "id": "6b0a1d462374b900010f1c1c",
               "label": "GitHub",
               "icon": null,
               "link": {
@@ -4648,7 +4669,7 @@
               }
             },
             {
-              "id": "6b0a0afd6fc5e3000125b2f7",
+              "id": "6b0a1d462374b900010f1c1d",
               "label": "Live status",
               "icon": "Activity",
               "link": {
@@ -4668,7 +4689,7 @@
       ],
       "legal": [
         {
-          "id": "6b0a0afd6fc5e3000125b2f9",
+          "id": "6b0a1d462374b900010f1c1f",
           "label": "Privacy",
           "link": {
             "type": "page",
@@ -4683,7 +4704,7 @@
           }
         },
         {
-          "id": "6b0a0afd6fc5e3000125b2fa",
+          "id": "6b0a1d462374b900010f1c20",
           "label": "Cookies",
           "link": {
             "type": "page",
@@ -4698,12 +4719,12 @@
           }
         },
         {
-          "id": "6b0a0afd6fc5e3000125b2fb",
+          "id": "6b0a1d462374b900010f1c21",
           "label": "Terms",
           "link": {
             "type": "page",
             "newTab": null,
-            "page": 12,
+            "page": 16,
             "url": null,
             "project": null,
             "projectTarget": "default",
@@ -4834,7 +4855,7 @@
       "back": "Back home",
       "body": null
     },
-    "updatedAt": "2026-11-27T22:58:05.009Z",
+    "updatedAt": "2026-11-28T01:42:51.230Z",
     "createdAt": "2026-11-27T22:57:58.683Z",
     "address": "http://localhost:8080"
   },

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { LOGO, palette } from "@thebensage-dev/ui";
-import { getContent } from "@/lib/cms";
+import { getContent } from "@/server/cms";
 
 // The link preview image (og:image, and twitter:image via twitter-image.tsx) in the palette's dark
 // colours, with the name, role and headline from the CMS. Drawn per request (the CMS client keeps

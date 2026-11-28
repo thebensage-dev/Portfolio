@@ -1,7 +1,7 @@
 import { FeatureGrid, FlowSteps, SectionHeading } from "@thebensage-dev/ui";
 import type { Block } from "@thebensage-dev/cms-client";
 import ToolList from "@/components/ToolList";
-import { features, flowSteps } from "@/lib/blockData";
+import { features, flowSteps } from "@thebensage-dev/cms-client/react";
 
 /** The pipeline, every piece of the platform and the tools behind it (full width, on /platform). */
 export default function StackSection({ block }: { block: Block<"stack"> }) {

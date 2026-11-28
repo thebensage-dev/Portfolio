@@ -1,6 +1,6 @@
 import ThemeSection from "@/components/ThemeSection";
 import type { BlockProps } from "@/blocks/types";
-import { resolveLink } from "@/lib/cms";
+import { resolveLink } from "@/server/cms";
 import { requestAccessUrl } from "@/server/auth";
 import { signInHref } from "@/server/headerProps";
 

@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { toneAt, SectionHeading } from "@thebensage-dev/ui";
 import type { Block, Page } from "@thebensage-dev/cms-client";
-import { sectionClass } from "@/components/GeneralSection";
+import { sectionClass } from "@thebensage-dev/cms-client/react";
 import ProjectCard from "@/components/ProjectCard";
-import { projectHref, type Content } from "@/lib/cms";
+import { projectHref, type Content } from "@/server/cms";
 
 /** Every live project (the CMS's Projects, in their order), then what's coming next. Render per
  *  request (project URLs come from env). */

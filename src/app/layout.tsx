@@ -13,8 +13,8 @@ import {
 } from "@thebensage-dev/ui";
 import { PreviewBanner } from "@thebensage-dev/ui/next";
 import { fontVariables } from "@/app/fonts";
-import RefreshOnSave from "@/components/RefreshOnSave";
-import { cmsPublicUrl, getContent, resolveLink } from "@/lib/cms";
+import { RefreshOnSave } from "@thebensage-dev/cms-client/react";
+import { cmsPublicUrl, getContent, resolveLink } from "@/server/cms";
 import { siteUrl } from "@/lib/env";
 import { sharedOpenGraph, titleTemplate } from "@/lib/pageMetadata";
 import "./globals.css";

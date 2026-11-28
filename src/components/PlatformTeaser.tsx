@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { SectionHeading } from "@thebensage-dev/ui";
 import type { Block, Page } from "@thebensage-dev/cms-client";
-import { sectionClass } from "@/components/GeneralSection";
+import { sectionClass } from "@thebensage-dev/cms-client/react";
 import ArrowLink from "@/components/ArrowLink";
 import DeepDiveCards from "@/components/DeepDiveCards";
-import { pageById, type Content } from "@/lib/cms";
+import { pageById, type Content } from "@/server/cms";
 
 /** The homepage's short look at the platform, linking to its pages. */
 export default function PlatformTeaser({

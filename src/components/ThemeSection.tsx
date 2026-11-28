@@ -8,7 +8,7 @@ import {
   type Theme,
 } from "@thebensage-dev/ui";
 import type { Block, Page } from "@thebensage-dev/cms-client";
-import { sectionClass } from "@/components/GeneralSection";
+import { sectionClass } from "@thebensage-dev/cms-client/react";
 import PaletteLocked, { type PaletteAccess } from "@/components/PaletteLocked";
 import PalettePreview from "@/components/PalettePreview";
 

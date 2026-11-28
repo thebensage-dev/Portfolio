@@ -1,5 +1,5 @@
 import { Footer, type FooterLink, iconByName } from "@thebensage-dev/ui";
-import { getContent, resolveLink, type CmsLink, type Content } from "@/lib/cms";
+import { getContent, resolveLink, type CmsLink, type Content } from "@/server/cms";
 
 type LinkRow = { label: string; icon?: string | null; link: CmsLink };
 

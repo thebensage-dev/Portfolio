@@ -1,5 +1,5 @@
-import SiteFooter from "@/components/SiteFooter";
-import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
 import type { HeaderProps } from "@/server/headerProps";
 
 /** The header, the page's main content and the footer. The default width suits an inner page; the page passes its own. */

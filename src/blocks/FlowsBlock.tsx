@@ -1,7 +1,7 @@
 import { FlowSteps } from "@thebensage-dev/ui";
 import PageSection from "@/components/PageSection";
 import type { BlockProps } from "@/blocks/types";
-import { flowSteps } from "@/lib/blockData";
+import { flowSteps } from "@thebensage-dev/cms-client/react";
 
 /** Rows of small steps, each with its label (how email travels). */
 export default function FlowsBlock({ block }: BlockProps<"flows">) {

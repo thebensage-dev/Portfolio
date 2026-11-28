@@ -1,16 +1,15 @@
 import { BrandBlobs } from "@thebensage-dev/ui";
 import type { Block } from "@thebensage-dev/cms-client";
-import CmsButtons from "@/components/CmsButtons";
-import type { Content } from "@/lib/cms";
+import { CmsButtons, type BlockContext } from "@thebensage-dev/cms-client/react";
 
 /** The homepage's opening: role, headline (part of it in the brand gradient), intro and the calls
  *  to action. */
 export default function HomeHero({
   block,
-  content,
+  ctx,
 }: {
   block: Block<"homeHero">;
-  content: Content;
+  ctx: Pick<BlockContext, "resolveLink">;
 }) {
   const { role, headline, highlight, intro, actions } = block;
   const [headlineStart, headlineEnd] = highlight ? headline.split(highlight) : [headline];
@@ -42,7 +41,7 @@ export default function HomeHero({
           className="reveal mt-10 flex flex-wrap justify-center gap-3"
           style={{ animationDelay: "240ms" }}
         >
-          <CmsButtons buttons={actions} content={content} />
+          <CmsButtons buttons={actions} ctx={ctx} />
         </div>
       </div>
     </section>

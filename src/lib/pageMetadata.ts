@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { contentType, size } from "@/app/opengraph-image";
-import type { Settings } from "@/lib/cms";
+import type { Settings } from "@/server/cms";
 
 /** Page titles read "<page> · <site name>"; the homepage is just the site name. */
 export const titleTemplate = (settings: Settings) => `%s · ${settings.name}`;

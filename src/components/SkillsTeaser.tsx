@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { SectionHeading, toneAt, toneClass, iconOrDot } from "@thebensage-dev/ui";
 import type { Block, Page } from "@thebensage-dev/cms-client";
-import { sectionClass } from "@/components/GeneralSection";
+import { sectionClass } from "@thebensage-dev/cms-client/react";
 import ArrowLink from "@/components/ArrowLink";
-import { pageById, type Content } from "@/lib/cms";
+import { pageById, type Content } from "@/server/cms";
 
 /** A short list of another page's cards (its first card grid), linking to it: on the homepage,
  *  the skills around the code. */

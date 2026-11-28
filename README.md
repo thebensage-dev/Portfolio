@@ -8,9 +8,10 @@ How the repos fit together, and the local stack that runs them all, are in [Infr
 
 Nothing on the site is written here: pages, projects, header, footer and every label are edited in the CMS (`cms.<domain>`, locally `cms.localhost:8080`).
 
-- `src/app/[[...slug]]/page.tsx` finds the CMS page for the address and lays it out by its width; each block is drawn by its component in `src/blocks/` (listed in `src/blocks/registry.ts`). A page added in the CMS is live here, and in the sitemap, with no code change.
-- A new kind of block is added in the Cms repo first, then gets a component here.
-- `src/lib/cms.ts` reads the CMS through `@thebensage-dev/cms-client`: cached for a minute, the last good copy while the CMS is down, and [`src/content/cms-snapshot.json`](src/content/cms-snapshot.json) if it has never reached it (`npm run content:snapshot` refreshes it).
+- `src/app/[[...slug]]/page.tsx` finds the CMS page for the address and lays it out by its width. The general blocks (text, images, columns, buttons, cards, timelines…) are drawn by `@thebensage-dev/cms-client/react`, the same on every site; this site's own (hero, projects, platform map, stack…) by their components in `src/blocks/` (all listed in `src/blocks/registry.ts`). A page added in the CMS is live here, and in the sitemap, with no code change.
+- A new kind of block is added in the Cms repo first, then gets a component: in the client package if every site may use it, here if only this site does.
+- Sign-in is `@thebensage-dev/auth` (Infrastructure's `clients/auth`), configured in `src/server/auth.ts`.
+- `src/server/cms.ts` reads the CMS through `@thebensage-dev/cms-client`: cached for a minute, the last good copy while the CMS is down, and [`src/content/cms-snapshot.json`](src/content/cms-snapshot.json) if it has never reached it (`npm run content:snapshot` refreshes it).
 - Drafts: the CMS's Live Preview and Preview button show unpublished pages here through draft mode (`/preview`, needs `PREVIEW_SECRET`).
 
 The privacy notice and terms are CMS pages that describe what's actually deployed; update them, and their date, when that changes.
@@ -22,7 +23,7 @@ Needs Node 26 (`.nvmrc`) and a `.npmrc` with a GitHub token that has `read:packa
 ```bash
 npm ci
 npm run dev      # http://localhost:3001
-npm run check    # format check, lint, typecheck
+npm run check    # format check, lint, typecheck, tests
 npm run build
 ```
 

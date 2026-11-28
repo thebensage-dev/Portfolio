@@ -1,6 +1,6 @@
 import { cache } from "react";
 import type { Project } from "@thebensage-dev/cms-client";
-import { projectUrl } from "@/lib/cms";
+import { projectUrl } from "@/server/cms";
 import { trimSlash } from "@/lib/env";
 
 export type ApiSpec = {
